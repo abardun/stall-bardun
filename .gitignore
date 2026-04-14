@@ -1,0 +1,4 @@
+node_modules/
+*.log
+news.js.tmp
+.DS_Store

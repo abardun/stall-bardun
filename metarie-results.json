@@ -1,0 +1,38 @@
+{
+  "horse": "Metarie",
+  "horseId": "ts793642",
+  "lastSync": "2026-04-13T17:56:19.000Z",
+  "source": "https://sportapp.travsport.se/sportinfo/horse/ts793642/results",
+  "error": null,
+  "summary": {
+    "starts": 20,
+    "wins": 5,
+    "places": 3,
+    "shows": 2,
+    "earnings": 356000
+  },
+  "races": [
+    { "date": "2026-02-25", "track": "Solvalla",   "race": "-8",   "driver": "Bardun Jonathan",  "start": 1,  "distance": "2160m", "time": "15,1",   "place": 3,    "prize": 17000  },
+    { "date": "2026-02-14", "track": "Åby",         "race": "-5r",  "driver": "Bardun Jonathan",  "start": 3,  "distance": "2160m", "time": "15,2",   "place": 8,    "prize": 5000   },
+    { "date": "2026-01-23", "track": "Färjestad",   "race": "-7",   "driver": "Bardun Jonathan",  "start": 2,  "distance": "2160m", "time": "15,4",   "place": 1,    "prize": 35000  },
+    { "date": "2026-01-09", "track": "Eskilstuna",  "race": "-7",   "driver": "Bardun Jonathan",  "start": 5,  "distance": "2160m", "time": "15,0",   "place": 1,    "prize": 35000  },
+    { "date": "2025-12-31", "track": "Axevalla",    "race": "-2",   "driver": "Benzon Niclas",    "start": 5,  "distance": "2140m", "time": "15,6a",  "place": 7,    "prize": 3000   },
+    { "date": "2025-12-15", "track": "Mantorp",     "race": "-4",   "driver": "Bardun Jonathan",  "start": 2,  "distance": "1640m", "time": "14,6",   "place": 3,    "prize": 11000  },
+    { "date": "2025-11-23", "track": "Mantorp",     "race": "-3",   "driver": "Bardun Jonathan",  "start": 5,  "distance": "1640m", "time": "14,8a",  "place": 1,    "prize": 15000  },
+    { "date": "2025-11-02", "track": "Solvalla",    "race": "-110", "driver": "Wäjersten Daniel", "start": 2,  "distance": "2140m", "time": "13,4a",  "place": null, "prize": 2250   },
+    { "date": "2025-10-19", "track": "Örebro",      "race": "-8",   "driver": "Djuse Magnus A",   "start": 11, "distance": "2100m", "time": "d4ag",   "place": null, "prize": 1500   },
+    { "date": "2025-10-11", "track": "Solvalla",    "race": "-14",  "driver": "Lilius Marcus",    "start": 6,  "distance": "2140m", "time": "13,0a",  "place": 4,    "prize": 30000  },
+    { "date": "2025-09-28", "track": "Solvalla",    "race": "-8",   "driver": "Djuse Mats E",     "start": 2,  "distance": "2140m", "time": "d10ag",  "place": null, "prize": 1500   },
+    { "date": "2025-08-23", "track": "Örebro",      "race": "-3",   "driver": "Djuse Magnus A",   "start": 1,  "distance": "1609m", "time": "ua",     "place": null, "prize": 1500   },
+    { "date": "2025-08-10", "track": "Vaggeryd",    "race": "-5",   "driver": "Djuse Magnus A",   "start": 9,  "distance": "2148m", "time": "str",    "place": null, "prize": 0      },
+    { "date": "2025-07-25", "track": "Romme",       "race": "-8",   "driver": "Djuse Magnus A",   "start": 6,  "distance": "2140m", "time": "16,6g",  "place": 1,    "prize": 50000  },
+    { "date": "2025-07-01", "track": "Solvalla",    "race": "-9",   "driver": "Jepson Carl Johan","start": 12, "distance": "2140m", "time": "14,1a",  "place": null, "prize": 1500   },
+    { "date": "2025-06-19", "track": "Dannero",     "race": "-8",   "driver": "Lilius Marcus",    "start": 4,  "distance": "2140m", "time": "14,7a",  "place": 5,    "prize": 20250  },
+    { "date": "2025-05-31", "track": "Mantorp",     "race": "-1",   "driver": "Djuse Magnus A",   "start": 5,  "distance": "2140m", "time": "14,6a",  "place": 2,    "prize": 25000  },
+    { "date": "2025-05-23", "track": "Solvalla",    "race": "-6",   "driver": "Kihlström Örjan",  "start": 3,  "distance": "2140m", "time": "d9ag",   "place": null, "prize": 1500   },
+    { "date": "2025-05-03", "track": "Gävle",       "race": "-2",   "driver": "Lilius Marcus",    "start": 9,  "distance": "2140m", "time": "16,0",   "place": 1,    "prize": 50000  },
+    { "date": "2025-04-23", "track": "Solvalla",    "race": "-1",   "driver": "Djuse Magnus A",   "start": 8,  "distance": "2140m", "time": "16,4",   "place": 2,    "prize": 35000  },
+    { "date": "2024-12-12", "track": "Örebro",      "race": "-1",   "driver": "Djuse Magnus A",   "start": 5,  "distance": "2140m", "time": "19,3m",  "place": 2,    "prize": 15000  },
+    { "date": "2024-09-25", "track": "Solvalla",    "race": "-15k", "driver": "Djuse Magnus A",   "start": 1,  "distance": "2140m", "time": "gdk",    "place": null, "prize": 0      }
+  ]
+}

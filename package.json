@@ -1,0 +1,14 @@
+{
+  "name": "stall-bardun",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "news": "node news-update.js",
+    "results": "node monday-update.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "node-fetch": "^3.3.2",
+    "cheerio": "^1.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "horse": "Floripa",
+  "horseId": "ts797786",
+  "lastSync": "2026-04-13T17:56:19.000Z",
+  "source": "https://sportapp.travsport.se/sportinfo/horse/ts797786/results",
+  "error": null,
+  "summary": {
+    "starts": 5,
+    "wins": 1,
+    "places": 0,
+    "shows": 2,
+    "earnings": 114400
+  },
+  "races": [
+    { "date": "2026-04-13", "track": "Färjestad",  "race": "-6",   "driver": "Bardun Jonathan", "start": 4, "distance": "2140m", "time": "16,9a", "place": 1,    "prize": 50000 },
+    { "date": "2026-03-22", "track": "Axevalla",   "race": "-8",   "driver": "Bardun Jonathan", "start": 2, "distance": "2140m", "time": "15,7a", "place": 4,    "prize": 18000 },
+    { "date": "2026-03-13", "track": "Örebro",     "race": "-8",   "driver": "Bardun Jonathan", "start": 1, "distance": "2100m", "time": "17,7a", "place": 3,    "prize": 17500 },
+    { "date": "2026-02-25", "track": "Solvalla",   "race": "-2",   "driver": "Bardun Jonathan", "start": 7, "distance": "2140m", "time": "16,6a", "place": 3,    "prize": 22500 },
+    { "date": "2025-08-18", "track": "Eskilstuna", "race": "-1",   "driver": "Bardun Jonathan", "start": 5, "distance": "1640m", "time": "24,2g", "place": 5,    "prize": 6400  },
+    { "date": "2025-07-30", "track": "Mantorp",    "race": "-13k", "driver": "Bardun Jonathan", "start": 1, "distance": "2140m", "time": "23,5g", "place": null, "prize": 0     }
+  ]
+}
