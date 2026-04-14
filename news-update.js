@@ -106,7 +106,13 @@ const SITE_RSS_FEEDS = [
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 async function run() {
   const Parser = (await import('rss-parser')).default;
-  const parser = new Parser({ timeout: 15000 });
+  const parser = new Parser({
+    timeout: 15000,
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; BardunStallAB-NewsBot/1.0; +https://www.stallbardun.com)',
+      'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+    }
+  });
 
   const seen = new Map(); // url → article
 
