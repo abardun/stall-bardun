@@ -354,6 +354,44 @@
     .btn-refresh.spinning svg { animation: spin 1s linear infinite; }
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+    /* ── VIDEOS SECTION ── */
+    .videos-section {
+      padding: 72px 60px; max-width: 1200px; margin: 0 auto;
+    }
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 24px;
+    }
+    .video-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .video-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-embed iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .video-info {
+      padding: 16px 20px;
+    }
+    .video-info h4 {
+      font-size: 14px; font-weight: 600; color: var(--white);
+      margin-bottom: 4px;
+    }
+    .video-info p {
+      font-size: 12px; color: var(--white-40);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
@@ -361,7 +399,8 @@
       .horse-hero-image { min-height: 300px; }
       .horse-hero-content { padding: 48px 28px; }
       .tabs-bar { padding: 0 24px; overflow-x: auto; }
-      .pedigree-section, .results-section { padding: 52px 24px; }
+      .pedigree-section, .results-section, .videos-section { padding: 52px 24px; }
+      .videos-grid { grid-template-columns: 1fr; }
       .pedigree-tree { grid-template-columns: 1fr; }
       .ped-subject { border-radius: 4px 4px 0 0; }
       .ped-subject::after { display: none; }
@@ -494,6 +533,7 @@
   <div class="tabs-bar">
     <button class="tab-btn" onclick="switchTab('pedigree', this)">Pedigree</button>
     <button class="tab-btn active" onclick="switchTab('results', this)">Racing Results</button>
+    <button class="tab-btn" onclick="switchTab('videos', this)">Videos</button>
   </div>
 
   <!-- TAB: PEDIGREE -->
@@ -625,6 +665,20 @@
           Refresh Now
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- TAB: VIDEOS -->
+  <div id="tab-videos" class="tab-panel">
+    <div class="videos-section">
+      <p class="section-eyebrow">Media</p>
+      <h2 class="section-title">Videos</h2>
+      <div class="section-divider"></div>
+      <div class="videos-grid">
+        <!-- Add video cards here: -->
+        <!-- <div class="video-card"><div class="video-embed"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div> -->
+      </div>
+      <p style="color:var(--white-40); font-size:14px; margin-top:24px;">No videos available yet. Check back soon.</p>
     </div>
   </div>
 
