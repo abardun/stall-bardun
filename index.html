@@ -1676,12 +1676,27 @@
       });
     });
 
-    // Form submit handler
-    document.querySelector('.form-submit').addEventListener('click', () => {
-      const msg = document.documentElement.lang === 'sv'
-        ? 'Tack för ditt meddelande. Vårt team återkommer till dig inom kort.'
-        : 'Thank you for your message. Our team will be in touch shortly.';
-      alert(msg);
+    // Form submit handler — submit to Netlify, then show confirmation
+    document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      }).then(function() {
+        var msg = document.documentElement.lang === 'sv'
+          ? 'Tack för ditt meddelande. Vårt team återkommer till dig inom kort.'
+          : 'Thank you for your message. Our team will be in touch shortly.';
+        alert(msg);
+        form.reset();
+      }).catch(function() {
+        var errMsg = document.documentElement.lang === 'sv'
+          ? 'Något gick fel. Skicka ett mejl till info@stallbardun.com istället.'
+          : 'Something went wrong. Please email info@stallbardun.com instead.';
+        alert(errMsg);
+      });
     });
   </script>
 
