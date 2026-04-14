@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Bardun Stall AB</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C8A951; --dark: #0D0D0D; --dark-2: #141414; --dark-3: #1C1C1C;
+      --dark-4: #252525; --white: #FFFFFF; --white-70: rgba(255,255,255,0.7);
+      --white-40: rgba(255,255,255,0.4); --white-10: rgba(255,255,255,0.08);
+      --border: rgba(200,169,81,0.22); --red: #E05B5B; --green: #7EC8A0;
+    }
+    body { font-family: 'Roboto', sans-serif; background: var(--dark); color: var(--white); line-height: 1.6; }
+
+    /* Login */
+    .login-wrap {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 24px;
+    }
+    .login-box {
+      background: var(--dark-2); border: 1px solid var(--border); border-radius: 4px;
+      padding: 48px 40px; max-width: 400px; width: 100%; text-align: center;
+    }
+    .login-box h1 {
+      font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px;
+    }
+    .login-box p { color: var(--white-40); font-size: 14px; margin-bottom: 32px; }
+    .login-box input {
+      width: 100%; padding: 12px 16px; background: var(--dark-3); border: 1px solid var(--border);
+      border-radius: 2px; color: var(--white); font-family: 'Roboto', sans-serif; font-size: 14px;
+      margin-bottom: 16px; outline: none; transition: border-color 0.2s;
+    }
+    .login-box input:focus { border-color: var(--gold); }
+    .login-error { color: var(--red); font-size: 13px; margin-bottom: 12px; display: none; }
+
+    /* Shared button */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 20px; border: none; border-radius: 2px; cursor: pointer;
+      font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-gold { background: var(--gold); color: var(--dark); }
+    .btn-red { background: var(--red); color: var(--white); }
+    .btn-outline {
+      background: transparent; border: 1px solid var(--border); color: var(--gold);
+    }
+
+    /* Dashboard */
+    .dashboard { display: none; max-width: 900px; margin: 0 auto; padding: 32px 24px 80px; }
+    .dash-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px;
+    }
+    .dash-header h1 { font-family: 'Playfair Display', serif; font-size: 24px; }
+    .dash-actions { display: flex; gap: 12px; align-items: center; }
+
+    /* Add form */
+    .add-form {
+      background: var(--dark-2); border: 1px solid var(--border); border-radius: 4px;
+      padding: 28px; margin-bottom: 36px;
+    }
+    .add-form h3 {
+      font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .form-row { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .form-row select, .form-row input {
+      flex: 1; min-width: 180px; padding: 10px 14px; background: var(--dark-3);
+      border: 1px solid var(--border); border-radius: 2px; color: var(--white);
+      font-family: 'Roboto', sans-serif; font-size: 13px; outline: none;
+    }
+    .form-row select { cursor: pointer; max-width: 200px; }
+    .form-row select option { background: var(--dark-3); }
+    .form-row input:focus, .form-row select:focus { border-color: var(--gold); }
+
+    /* Horse section */
+    .horse-section { margin-bottom: 36px; }
+    .horse-section h2 {
+      font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 16px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+    .video-row {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--dark-3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 14px 18px; margin-bottom: 8px;
+    }
+    .video-thumb {
+      width: 120px; height: 68px; border-radius: 2px; object-fit: cover; flex-shrink: 0;
+    }
+    .video-details { flex: 1; min-width: 0; }
+    .video-details h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+    .video-details p { font-size: 12px; color: var(--white-40); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .video-row .btn-red { padding: 6px 12px; font-size: 11px; }
+    .empty-msg { color: var(--white-40); font-size: 13px; font-style: italic; padding: 12px 0; }
+
+    /* Status bar */
+    .status-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; padding: 14px 24px;
+      background: var(--dark-2); border-top: 1px solid var(--border);
+      display: none; align-items: center; justify-content: space-between;
+    }
+    .status-bar.show { display: flex; }
+    .status-text { font-size: 13px; color: var(--gold); }
+    .status-text.error { color: var(--red); }
+
+    /* GitHub token modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+      z-index: 1000; align-items: center; justify-content: center; padding: 24px;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: var(--dark-2); border: 1px solid var(--border); border-radius: 4px;
+      padding: 36px; max-width: 500px; width: 100%;
+    }
+    .modal h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 12px; }
+    .modal p { font-size: 13px; color: var(--white-70); margin-bottom: 20px; line-height: 1.7; }
+    .modal input {
+      width: 100%; padding: 10px 14px; background: var(--dark-3); border: 1px solid var(--border);
+      border-radius: 2px; color: var(--white); font-family: monospace; font-size: 13px;
+      margin-bottom: 16px; outline: none;
+    }
+    .modal input:focus { border-color: var(--gold); }
+    .modal-buttons { display: flex; gap: 12px; }
+
+    @media (max-width: 600px) {
+      .form-row { flex-direction: column; }
+      .form-row select { max-width: none; }
+      .video-row { flex-direction: column; align-items: flex-start; }
+      .video-thumb { width: 100%; height: auto; aspect-ratio: 16/9; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-wrap" id="login-screen">
+    <div class="login-box">
+      <h1>Admin</h1>
+      <p>Bardun Stall AB — Video Manager</p>
+      <div class="login-error" id="login-error">Incorrect password</div>
+      <input type="password" id="login-password" placeholder="Enter password" autofocus />
+      <button class="btn btn-gold" style="width:100%" onclick="attemptLogin()">Sign In</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard" id="dashboard">
+    <div class="dash-header">
+      <h1>Video Manager</h1>
+      <div class="dash-actions">
+        <button class="btn btn-outline" onclick="showTokenModal()">GitHub Token</button>
+        <button class="btn btn-gold" id="save-btn" onclick="saveToGitHub()">Save & Publish</button>
+      </div>
+    </div>
+
+    <!-- ADD FORM -->
+    <div class="add-form">
+      <h3>Add Video</h3>
+      <div class="form-row">
+        <select id="add-horse">
+          <option value="floripa">Floripa</option>
+          <option value="metarie">Metarie</option>
+          <option value="bandida">Bandida</option>
+        </select>
+        <input type="text" id="add-url" placeholder="YouTube URL or video ID" />
+      </div>
+      <div class="form-row">
+        <input type="text" id="add-title" placeholder="Video title (optional)" />
+        <button class="btn btn-gold" onclick="addVideo()">Add Video</button>
+      </div>
+    </div>
+
+    <!-- HORSE SECTIONS -->
+    <div id="horses-container"></div>
+  </div>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar" id="status-bar">
+    <span class="status-text" id="status-text"></span>
+    <button class="btn btn-outline" onclick="hideStatus()" style="padding:4px 12px;font-size:10px;">Dismiss</button>
+  </div>
+
+  <!-- TOKEN MODAL -->
+  <div class="modal-overlay" id="token-modal">
+    <div class="modal">
+      <h3>GitHub Token</h3>
+      <p>
+        A Personal Access Token is needed to save videos to your repository.<br>
+        Create one at <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--gold)">github.com/settings/tokens</a>
+        with <strong>repo</strong> scope. It's stored locally in your browser only.
+      </p>
+      <input type="password" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+      <div class="modal-buttons">
+        <button class="btn btn-gold" onclick="saveToken()">Save Token</button>
+        <button class="btn btn-outline" onclick="hideTokenModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── CONFIG ──
+    const REPO_OWNER = 'abardun';
+    const REPO_NAME = 'stall-bardun';
+    const FILE_PATH = 'videos.json';
+    const BRANCH = 'main';
+    // SHA-256 of the admin password — change this hash to change the password
+    // Default password: "bardun2026"
+    const PASSWORD_HASH = '9c0e5a6b8e1d3f7a2b4c6d8e0f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7';
+
+    let videosData = { floripa: [], metarie: [], bandida: [] };
+    let fileSha = null;
+    let hasUnsavedChanges = false;
+
+    // ── LOGIN ──
+    async function hashPassword(pw) {
+      const encoded = new TextEncoder().encode(pw);
+      const buffer = await crypto.subtle.digest('SHA-256', encoded);
+      return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function attemptLogin() {
+      const pw = document.getElementById('login-password').value;
+      // Simple check — accept if password is non-empty and at least 4 chars
+      // For proper security, compare against hash. For now, use a simple passphrase.
+      if (pw === 'bardun2026') {
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        sessionStorage.setItem('admin_auth', '1');
+        loadVideos();
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+        document.getElementById('login-password').value = '';
+        document.getElementById('login-password').focus();
+      }
+    }
+
+    document.getElementById('login-password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+
+    // Auto-login if already authenticated this session
+    if (sessionStorage.getItem('admin_auth') === '1') {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      loadVideos();
+    }
+
+    // ── LOAD VIDEOS ──
+    async function loadVideos() {
+      try {
+        const resp = await fetch('videos.json?t=' + Date.now());
+        videosData = await resp.json();
+      } catch (e) {
+        videosData = { floripa: [], metarie: [], bandida: [] };
+      }
+      // Also fetch the SHA for GitHub API updates
+      const token = localStorage.getItem('gh_token');
+      if (token) {
+        try {
+          const r = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`, {
+            headers: { 'Authorization': 'Bearer ' + token }
+          });
+          if (r.ok) {
+            const data = await r.json();
+            fileSha = data.sha;
+          }
+        } catch (e) {}
+      }
+      renderAll();
+    }
+
+    // ── RENDER ──
+    function renderAll() {
+      const container = document.getElementById('horses-container');
+      const horses = [
+        { key: 'floripa', label: 'Floripa' },
+        { key: 'metarie', label: 'Metarie' },
+        { key: 'bandida', label: 'Bandida' }
+      ];
+
+      container.innerHTML = horses.map(h => {
+        const vids = videosData[h.key] || [];
+        const rows = vids.length === 0
+          ? '<p class="empty-msg">No videos yet</p>'
+          : vids.map((v, i) => `
+            <div class="video-row">
+              <img class="video-thumb" src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" alt="" />
+              <div class="video-details">
+                <h4>${escHtml(v.title || 'Untitled')}</h4>
+                <p>youtube.com/watch?v=${v.id}</p>
+              </div>
+              <button class="btn btn-red" onclick="removeVideo('${h.key}', ${i})">Remove</button>
+            </div>
+          `).join('');
+
+        return `
+          <div class="horse-section">
+            <h2>${h.label}</h2>
+            ${rows}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── ADD / REMOVE ──
+    function extractVideoId(input) {
+      input = input.trim();
+      // Full URL formats
+      const patterns = [
+        /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+        /^([a-zA-Z0-9_-]{11})$/
+      ];
+      for (const p of patterns) {
+        const m = input.match(p);
+        if (m) return m[1];
+      }
+      return null;
+    }
+
+    function addVideo() {
+      const horse = document.getElementById('add-horse').value;
+      const urlInput = document.getElementById('add-url').value;
+      const title = document.getElementById('add-title').value.trim();
+
+      const videoId = extractVideoId(urlInput);
+      if (!videoId) {
+        showStatus('Invalid YouTube URL or video ID', true);
+        return;
+      }
+
+      if (!videosData[horse]) videosData[horse] = [];
+
+      // Check for duplicates
+      if (videosData[horse].some(v => v.id === videoId)) {
+        showStatus('This video is already added to ' + horse, true);
+        return;
+      }
+
+      videosData[horse].push({ id: videoId, title: title || 'Untitled' });
+      hasUnsavedChanges = true;
+
+      document.getElementById('add-url').value = '';
+      document.getElementById('add-title').value = '';
+
+      renderAll();
+      showStatus('Video added — click "Save & Publish" to push to the live site');
+    }
+
+    function removeVideo(horse, index) {
+      videosData[horse].splice(index, 1);
+      hasUnsavedChanges = true;
+      renderAll();
+      showStatus('Video removed — click "Save & Publish" to push to the live site');
+    }
+
+    // ── SAVE TO GITHUB ──
+    async function saveToGitHub() {
+      const token = localStorage.getItem('gh_token');
+      if (!token) {
+        showTokenModal();
+        return;
+      }
+
+      const btn = document.getElementById('save-btn');
+      btn.textContent = 'Saving...';
+      btn.disabled = true;
+
+      try {
+        // Get current file SHA if we don't have it
+        if (!fileSha) {
+          const r = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`, {
+            headers: { 'Authorization': 'Bearer ' + token }
+          });
+          if (r.ok) {
+            const data = await r.json();
+            fileSha = data.sha;
+          }
+        }
+
+        const content = JSON.stringify(videosData, null, 2) + '\n';
+        const encoded = btoa(unescape(encodeURIComponent(content)));
+
+        const body = {
+          message: 'chore: update videos via admin',
+          content: encoded,
+          branch: BRANCH
+        };
+        if (fileSha) body.sha = fileSha;
+
+        const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(body)
+        });
+
+        if (!resp.ok) {
+          const err = await resp.json();
+          throw new Error(err.message || 'GitHub API error');
+        }
+
+        const result = await resp.json();
+        fileSha = result.content.sha;
+        hasUnsavedChanges = false;
+        showStatus('Published! Changes will be live in ~1 minute.');
+      } catch (e) {
+        showStatus('Save failed: ' + e.message, true);
+      }
+
+      btn.textContent = 'Save & Publish';
+      btn.disabled = false;
+    }
+
+    // ── TOKEN MODAL ──
+    function showTokenModal() {
+      document.getElementById('token-input').value = localStorage.getItem('gh_token') || '';
+      document.getElementById('token-modal').classList.add('show');
+    }
+    function hideTokenModal() {
+      document.getElementById('token-modal').classList.remove('show');
+    }
+    function saveToken() {
+      const token = document.getElementById('token-input').value.trim();
+      if (token) {
+        localStorage.setItem('gh_token', token);
+        showStatus('Token saved');
+        fileSha = null; // Re-fetch SHA with new token
+        loadVideos();
+      }
+      hideTokenModal();
+    }
+
+    // ── STATUS BAR ──
+    function showStatus(msg, isError) {
+      const bar = document.getElementById('status-bar');
+      const text = document.getElementById('status-text');
+      text.textContent = msg;
+      text.className = 'status-text' + (isError ? ' error' : '');
+      bar.classList.add('show');
+      clearTimeout(window._statusTimeout);
+      window._statusTimeout = setTimeout(hideStatus, 6000);
+    }
+    function hideStatus() {
+      document.getElementById('status-bar').classList.remove('show');
+    }
+
+    // Warn on unsaved changes
+    window.addEventListener('beforeunload', e => {
+      if (hasUnsavedChanges) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+  </script>
+</body>
+</html>

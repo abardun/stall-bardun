@@ -723,17 +723,31 @@
       <p class="section-eyebrow">Media</p>
       <h2 class="section-title">Videos</h2>
       <div class="section-divider"></div>
-      <div class="videos-grid">
-        <div class="video-card">
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/xaHa-bdpTTE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
+      <div class="videos-grid" id="videos-grid"></div>
+      <p class="no-videos" id="no-videos" style="color:var(--white-40); font-size:14px; margin-top:24px; display:none;">No videos available yet. Check back soon.</p>
     </div>
   </div>
 
   <script>
+    // ── LOAD VIDEOS ──
+    const HORSE_KEY = 'floripa';
+    fetch('videos.json?t=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        const videos = data[HORSE_KEY] || [];
+        const grid = document.getElementById('videos-grid');
+        if (videos.length === 0) {
+          document.getElementById('no-videos').style.display = 'block';
+          return;
+        }
+        grid.innerHTML = videos.map(v =>
+          '<div class="video-card"><div class="video-embed">' +
+          '<iframe src="https://www.youtube.com/embed/' + v.id + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>' +
+          '</div>' + (v.title ? '<div class="video-info"><h4>' + v.title.replace(/</g,'&lt;') + '</h4></div>' : '') + '</div>'
+        ).join('');
+      })
+      .catch(() => { document.getElementById('no-videos').style.display = 'block'; });
+
     // ── TAB SWITCHING ──
     function switchTab(id, btn) {
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
