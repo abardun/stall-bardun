@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<!-- Hidden form for Netlify Forms detection (bot reads this during deploy) -->
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-  <input name="form-name" type="hidden" value="contact" />
-  <input name="bot-field" />
-  <input name="first-name" />
-  <input name="last-name" />
-  <input name="email" />
-  <input name="interest" />
-  <textarea name="message"></textarea>
-</form>
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
@@ -1565,9 +1555,7 @@
     </div>
     <div class="contact-form" data-reveal>
       <h3 id="form-title">Send Us a Message</h3>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p style="display:none"><input name="bot-field" /></p>
+      <form id="contact-form" action="https://formspree.io/f/meevqyzg" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label id="lbl-firstname">First Name</label>
@@ -1686,21 +1674,25 @@
       });
     });
 
-    // Form submit handler — submit to Netlify, then show confirmation
-    document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
+    // Form submit handler — submit to Formspree
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       var form = this;
       var data = new FormData(form);
-      fetch('/', {
+      fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      }).then(function() {
-        var msg = document.documentElement.lang === 'sv'
-          ? 'Tack för ditt meddelande. Vårt team återkommer till dig inom kort.'
-          : 'Thank you for your message. Our team will be in touch shortly.';
-        alert(msg);
-        form.reset();
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(resp) {
+        if (resp.ok) {
+          var msg = document.documentElement.lang === 'sv'
+            ? 'Tack för ditt meddelande. Vårt team återkommer till dig inom kort.'
+            : 'Thank you for your message. Our team will be in touch shortly.';
+          alert(msg);
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
       }).catch(function() {
         var errMsg = document.documentElement.lang === 'sv'
           ? 'Något gick fel. Skicka ett mejl till andreas@stallbardun.com istället.'
