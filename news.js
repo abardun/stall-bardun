@@ -4,6 +4,13 @@ window.BARDUN_NEWS = {
   updated: "2026-04-14",
   articles: [
     {
+        "title": "Floripa tog första segern i karriären – har sprungit in mer än 100 000",
+        "url": "https://www.travronden.se/referat/floripa-tog-forsta-segern-i-karriaren-har-sprungit-in-mer-an-100-000",
+        "source": "Travronden",
+        "date": "2026-03-10",
+        "excerpt": "Floripa (e. Father Patrick) tog karriärens första seger tillsammans med sin tränare Jonathan Bardun."
+    },
+    {
         "title": "V64 Tips Eskilstuna 9/1 – Metarie med Bardun i V64-4",
         "url": "https://www.rekatochklart.com/trav/v64-tips/v64-tips-eskilstuna-9-1/",
         "source": "rekatochklart.com",
