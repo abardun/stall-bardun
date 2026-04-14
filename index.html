@@ -1521,7 +1521,7 @@
     <div class="cta-content" data-reveal>
       <p class="section-eyebrow" style="justify-content:center;display:flex;">Ready to Own a Champion?</p>
       <h2><span style="color:var(--gold)">Join Us</span></h2>
-      <p>Whether you want to own a horse outright, explore shared ownership or investment, place a horse in training, or get expert guidance on buying — we can help. Get in touch to discuss the right approach for you.</p>
+      <p id="cta-body">Whether you want to own a horse outright, explore shared ownership or investment, place a horse in training, or get expert guidance on buying — we can help. Get in touch to discuss the right approach for you.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn-primary">Get in Touch</a>
         <a href="#services" class="btn-secondary">Explore Services</a>
@@ -1969,7 +1969,7 @@
     if (cta) {
       cta.querySelector('.section-eyebrow').textContent = t.cta_eyebrow;
       cta.querySelector('h2 span').textContent = t.cta_title;
-      cta.querySelector('p').textContent = t.cta_body;
+      document.getElementById('cta-body').textContent = t.cta_body;
       const btns = cta.querySelectorAll('.hero-buttons a');
       if (btns[0]) btns[0].textContent = t.cta_btn1;
       if (btns[1]) btns[1].textContent = t.cta_btn2;
