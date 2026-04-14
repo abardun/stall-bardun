@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" href="/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,6 +36,7 @@
       --dark-4: #252525;
       --navy: #1B4B6E;
       --white: #FFFFFF;
+      --white-90: rgba(255,255,255,0.9);
       --white-70: rgba(255,255,255,0.7);
       --white-40: rgba(255,255,255,0.4);
       --white-10: rgba(255,255,255,0.08);
@@ -56,13 +57,13 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 60px; height: 76px;
-      background: rgba(13,13,13,0.95);
-      backdrop-filter: blur(12px);
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; height: 100%; align-self: stretch; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; height: 100%; }
     .nav-logo-img {
-      height: 80px; width: 80px; object-fit: cover; border-radius: 0;
+      height: 80px; width: 80px; object-fit: cover;
       display: block; flex-shrink: 0;
       filter: brightness(0) saturate(100%) invert(72%) sepia(38%) saturate(620%) hue-rotate(2deg) brightness(100%);
     }
@@ -72,80 +73,134 @@
       color: var(--white-70); text-decoration: none; transition: color 0.2s;
     }
     .nav-back:hover { color: var(--gold); }
-    .nav-back::before { content: '\2190'; font-size: 14px; }
 
-    /* -- HERO -- */
-    .horse-hero {
+    /* -- HERO (cinematic full-width) -- */
+    .hero {
+      position: relative;
       padding-top: 76px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      min-height: 560px;
+      min-height: 75vh;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
     }
-    .horse-hero-image {
-      background: url('/floripa.png') center/cover no-repeat;
-      min-height: 480px;
+    .hero-image {
+      position: absolute; inset: 0;
+      background: url('/floripa.png') center 20%/cover no-repeat;
     }
-    .horse-hero-content {
-      background: var(--dark-2);
-      padding: 64px 72px;
-      display: flex; flex-direction: column; justify-content: center;
-      border-left: 1px solid var(--border);
+    .hero-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(13,13,13,0.15) 0%,
+        rgba(13,13,13,0.4) 40%,
+        rgba(13,13,13,0.92) 65%,
+        rgba(13,13,13,0.98) 80%
+      );
     }
-    .horse-eyebrow {
-      font-size: 11px; font-weight: 500; letter-spacing: 0.3em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    @media (max-width: 900px) {
+      .hero-image::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(13,13,13,0.1) 0%,
+          rgba(13,13,13,0.6) 50%,
+          rgba(13,13,13,0.97) 75%
+        );
+      }
     }
-    .horse-name {
+    .hero-content {
+      position: relative; z-index: 2;
+      width: 100%; max-width: 1400px; margin: 0 auto;
+      padding: 80px 60px 60px;
+      display: flex; align-items: center; justify-content: flex-end;
+    }
+    .hero-info {
+      max-width: 540px;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+    }
+    .hero-name {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(48px, 6vw, 72px); font-weight: 900;
-      line-height: 1; color: var(--white); margin-bottom: 6px;
+      font-size: clamp(52px, 7vw, 88px);
+      font-weight: 900; line-height: 0.95;
+      color: var(--white); margin-bottom: 12px;
     }
-    .horse-lineage-hero {
-      font-size: 14px; font-weight: 600; color: var(--red);
-      margin-bottom: 28px; letter-spacing: 0.03em;
+    .hero-lineage {
+      font-size: 15px; font-weight: 500; color: var(--red);
+      margin-bottom: 32px; letter-spacing: 0.04em;
     }
-    .horse-meta-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: var(--border);
-      border: 1px solid var(--border); border-radius: 4px;
-      overflow: hidden; margin-bottom: 32px;
+    .hero-lineage span { color: var(--white-40); }
+
+    /* Stats row */
+    .stats-row {
+      display: flex; gap: 0;
+      margin-bottom: 32px;
     }
-    .horse-meta-item {
-      background: var(--dark-3); padding: 16px 20px;
+    .stat-item {
+      flex: 1;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
     }
-    .horse-meta-label {
-      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    .stat-item:not(:last-child) {
+      border-right: 1px solid var(--border);
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+    .stat-label {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--white-40); margin-bottom: 4px;
     }
-    .horse-meta-value {
-      font-size: 16px; font-weight: 700; color: var(--white);
+    .stat-value {
+      font-size: 18px; font-weight: 700; color: var(--white);
     }
-    .horse-meta-value.accent { color: var(--gold); }
-    .horse-desc {
-      font-size: 15px; font-weight: 300; color: var(--white-70);
-      line-height: 1.8; margin-bottom: 28px;
+    .stat-value.accent { color: var(--gold); }
+
+    /* CTA row */
+    .hero-cta {
+      display: flex; align-items: center; gap: 16px;
+      flex-wrap: wrap;
     }
-    .travsport-link {
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--gold); color: var(--dark);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 14px 28px; border-radius: 3px;
+      text-decoration: none; transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-primary svg { width: 14px; height: 14px; }
+    .btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--gold); text-decoration: none;
-      border: 1px solid var(--border); border-radius: 2px; padding: 10px 18px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid var(--border); padding: 13px 24px; border-radius: 3px;
       transition: background 0.2s, border-color 0.2s;
     }
-    .travsport-link:hover { background: var(--white-10); border-color: var(--gold); }
-    .travsport-link svg { width: 14px; height: 14px; }
+    .btn-outline:hover { background: var(--white-10); border-color: var(--gold); }
+    .btn-outline svg { width: 14px; height: 14px; }
 
     /* -- TABS (sub-nav) -- */
     .tabs-bar {
-      background: var(--dark-3);
+      background: var(--dark-2);
       border-bottom: 1px solid var(--border);
-      display: flex; gap: 0; padding: 0 60px;
+      display: flex; gap: 0;
+      padding: 0;
+      justify-content: center;
       position: sticky; top: 76px; z-index: 50;
     }
     .tab-btn {
       background: none; border: none; color: var(--white-40);
       font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 18px 24px; cursor: pointer;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 18px 32px; cursor: pointer;
       border-bottom: 2px solid transparent;
       transition: color 0.2s, border-color 0.2s;
       text-decoration: none;
@@ -153,25 +208,146 @@
     .tab-btn:hover { color: var(--white); }
     .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
 
+    /* -- STORY SECTION -- */
+    .story-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 60px 0;
+      text-align: center;
+    }
+    .story-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; color: var(--gold); opacity: 0.3;
+      line-height: 1; margin-bottom: -12px;
+    }
+    .story-text {
+      font-size: 17px; font-weight: 300; color: var(--white-70);
+      line-height: 1.9; margin-bottom: 20px;
+    }
+    .story-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 18px;
+      color: var(--gold); line-height: 1.6;
+    }
+
     /* -- OVERVIEW CARDS -- */
-    .overview-card:hover { border-color: var(--gold) !important; }
+    .cards-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 60px 80px;
+    }
+    .cards-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .cards-header-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .cards-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 700; color: var(--white);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .overview-card {
+      position: relative;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 36px 32px 32px;
+      text-decoration: none;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      overflow: hidden;
+    }
+    .overview-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .overview-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+    .overview-card:hover::before { opacity: 1; }
+    .card-icon {
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 8px;
+      background: rgba(200,169,81,0.1);
+      margin-bottom: 20px;
+    }
+    .card-icon svg { width: 22px; height: 22px; color: var(--gold); }
+    .card-eyebrow {
+      font-size: 10px; font-weight: 500; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 14px; color: var(--white-70); line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gold);
+      transition: gap 0.2s;
+    }
+    .overview-card:hover .card-link { gap: 10px; }
 
     /* -- RESPONSIVE -- */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
-      .horse-hero { grid-template-columns: 1fr; }
-      .horse-hero-image { min-height: 300px; }
-      .horse-hero-content { padding: 48px 28px; }
-      .tabs-bar { padding: 0 24px; overflow-x: auto; }
-    }
-
-    @media (min-width: 1400px) {
-      .horse-hero {
-        max-width: 1400px;
-        margin: 0 auto;
+      .hero { min-height: 90vh; }
+      .hero-content {
+        padding: 0 24px 48px;
+        align-items: flex-end;
+        justify-content: flex-start;
       }
+      .hero-info { max-width: 100%; }
+      .stats-row { flex-wrap: wrap; }
+      .stat-item {
+        flex: 0 0 calc(50% - 12px);
+      }
+      .stat-item:nth-child(2) {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      .stat-item:nth-child(3) {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      .tabs-bar { overflow-x: auto; justify-content: flex-start; padding: 0 24px; }
+      .story-section { padding: 56px 24px 0; }
+      .cards-section { padding: 48px 24px 64px; }
+      .cards-grid { grid-template-columns: 1fr; }
     }
 
+    @media (max-width: 480px) {
+      .hero-name { font-size: 48px; }
+      .stat-item { flex: 0 0 100%; }
+      .stat-item:not(:last-child) {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      .hero-cta { flex-direction: column; }
+      .hero-cta a { width: 100%; justify-content: center; }
+    }
+
+    /* -- FOOTER -- */
     footer {
       background: var(--dark); padding: 64px 48px 32px;
       border-top: 1px solid var(--border);
@@ -180,25 +356,25 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 48px; margin-bottom: 48px;
     }
-    .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-top: 16px; }
+    .footer-brand p { color: var(--white-40); font-size: 14px; line-height: 1.7; margin-top: 16px; }
     .footer-col h4 {
       font-family: 'Playfair Display', serif; color: var(--white);
       font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
     }
-    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-col ul a { color: var(--white-40); text-decoration: none; font-size: 13px; transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--gold); }
     .footer-bottom {
       border-top: 1px solid var(--border); padding-top: 24px;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .footer-bottom p { color: var(--text-muted); font-size: 12px; }
+    .footer-bottom p { color: var(--white-40); font-size: 12px; }
     .social-links { display: flex; gap: 12px; }
     .social-link {
       width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); text-decoration: none; font-size: 14px; transition: all 0.2s;
+      color: var(--white-40); text-decoration: none; font-size: 14px; transition: all 0.2s;
     }
     .social-link:hover { border-color: var(--gold); color: var(--gold); }
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
@@ -238,52 +414,61 @@
     <a href="/" class="nav-logo">
       <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
     </a>
-    <a href="/#horses" class="nav-back">Tillbaka till hästar</a>
+    <a href="/#horses" class="nav-back">← Tillbaka till hästar</a>
   </nav>
 
   <!-- HERO -->
-  <div class="horse-hero">
-    <div class="horse-hero-image"></div>
-    <div class="horse-hero-content">
-      <p class="horse-eyebrow">Hästprofil &middot; Bardun Stall AB</p>
-      <h1 class="horse-name">Floripa</h1>
-      <p class="horse-lineage-hero">Far: Father Patrick &nbsp;|&nbsp; Mor: Gazelle Am</p>
-      <div class="horse-meta-grid">
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Född</div>
-          <div class="horse-meta-value">2023</div>
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <div class="hero-info">
+        <p class="hero-eyebrow">Hästprofil</p>
+        <h1 class="hero-name">Floripa</h1>
+        <p class="hero-lineage">Far: Father Patrick <span>|</span> Mor: Gazelle Am</p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-label">Född</div>
+            <div class="stat-value">2023</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Debut</div>
+            <div class="stat-value">2025</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Kön</div>
+            <div class="stat-value">Sto</div>
+          </div>
         </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Debut</div>
-          <div class="horse-meta-value">2025</div>
+
+        <div class="stats-row" style="margin-top: -16px;">
+          <div class="stat-item">
+            <div class="stat-label">Ras</div>
+            <div class="stat-value">Varmblodig travare</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Disciplin</div>
+            <div class="stat-value">Trav</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">UELN</div>
+            <div class="stat-value accent">75200211S231295</div>
+          </div>
         </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Kön</div>
-          <div class="horse-meta-value">Sto</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Ras</div>
-          <div class="horse-meta-value">Varmblodig travare</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Disciplin</div>
-          <div class="horse-meta-value">Trav</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">UELN</div>
-          <div class="horse-meta-value accent">75200211S231295</div>
+
+        <div class="hero-cta">
+          <a href="/floripa/resultat/" class="btn-primary">
+            Se resultat
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          </a>
+          <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/pedigree" target="_blank" class="btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            Visa på Travsport
+          </a>
         </div>
       </div>
-      <p class="horse-desc">Floripa är smeknamnet som varje brasilianare använder för Florianópolis — den vackraste och mest älskade staden i Brasilien. En ö med turkost vatten, gröna berg och orörda stränder som har en särskild plats i varje brasilianares hjärta som ingen annan stad.</p>
-      <p class="horse-desc" style="margin-top:16px; color:var(--gold); font-style:italic">Hästen Floripa bär samma skönhet med sig ut på banan.</p>
-      <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/pedigree" target="_blank" class="travsport-link">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-        Visa på Travsport
-      </a>
     </div>
-  </div>
+  </section>
 
   <!-- SUB-NAV -->
   <div class="tabs-bar">
@@ -293,23 +478,52 @@
     <a href="/floripa/videor/" class="tab-btn">Videor</a>
   </div>
 
+  <!-- STORY -->
+  <div class="story-section">
+    <div class="story-quote">&ldquo;</div>
+    <p class="story-text">Floripa är smeknamnet som varje brasilianare använder för Florianópolis — den vackraste och mest älskade staden i Brasilien. En ö med turkost vatten, gröna berg och orörda stränder som har en särskild plats i varje brasilianares hjärta som ingen annan stad.</p>
+    <p class="story-tagline">Hästen Floripa bär samma skönhet med sig ut på banan.</p>
+  </div>
+
   <!-- OVERVIEW CARDS -->
-  <div class="overview-cards" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:24px; max-width:1200px; margin:0 auto; padding:72px 60px;">
-    <a href="/floripa/harstamning/" class="overview-card" style="background:var(--dark-3); border:1px solid var(--border); border-radius:4px; padding:32px 28px; text-decoration:none; transition:border-color 0.2s;">
-      <p style="font-size:11px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Blodlinjer</p>
-      <h3 style="font-size:20px; font-weight:900; color:var(--white); margin-bottom:8px;">Härstamning</h3>
-      <p style="font-size:14px; color:var(--white-70); line-height:1.7;">Utforska Floripas fullständiga stamträd — far Father Patrick, mor Gazelle Am och hela blodlinjen.</p>
-    </a>
-    <a href="/floripa/resultat/" class="overview-card" style="background:var(--dark-3); border:1px solid var(--border); border-radius:4px; padding:32px 28px; text-decoration:none; transition:border-color 0.2s;">
-      <p style="font-size:11px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Prestation</p>
-      <h3 style="font-size:20px; font-weight:900; color:var(--white); margin-bottom:8px;">Tävlingsresultat</h3>
-      <p style="font-size:14px; color:var(--white-70); line-height:1.7;">Fullständig tävlingshistorik synkad från Travsport varje måndag — starter, segrar, tider och prispengar.</p>
-    </a>
-    <a href="/floripa/videor/" class="overview-card" style="background:var(--dark-3); border:1px solid var(--border); border-radius:4px; padding:32px 28px; text-decoration:none; transition:border-color 0.2s;">
-      <p style="font-size:11px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Media</p>
-      <h3 style="font-size:20px; font-weight:900; color:var(--white); margin-bottom:8px;">Videor</h3>
-      <p style="font-size:14px; color:var(--white-70); line-height:1.7;">Se tävlingsrepriser, intervjuer och träningsfilmer med Floripa.</p>
-    </a>
+  <div class="cards-section">
+    <div class="cards-header">
+      <p class="cards-header-eyebrow">Utforska</p>
+      <h2 class="cards-header-title">Lär känna Floripa</h2>
+    </div>
+    <div class="cards-grid">
+
+      <a href="/floripa/harstamning/" class="overview-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+        </div>
+        <p class="card-eyebrow">Blodlinjer</p>
+        <h3 class="card-title">Härstamning</h3>
+        <p class="card-desc">Utforska Floripas fullständiga stamträd — far Father Patrick, mor Gazelle Am och hela blodlinjen.</p>
+        <span class="card-link">Utforska →</span>
+      </a>
+
+      <a href="/floripa/resultat/" class="overview-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0016.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.023 6.023 0 01-7.54 0" /></svg>
+        </div>
+        <p class="card-eyebrow">Prestation</p>
+        <h3 class="card-title">Tävlingsresultat</h3>
+        <p class="card-desc">Fullständig tävlingshistorik synkad från Travsport — starter, segrar, tider och prispengar.</p>
+        <span class="card-link">Visa resultat →</span>
+      </a>
+
+      <a href="/floripa/videor/" class="overview-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" /></svg>
+        </div>
+        <p class="card-eyebrow">Media</p>
+        <h3 class="card-title">Videor</h3>
+        <p class="card-desc">Se tävlingsrepriser, intervjuer och träningsfilmer med Floripa.</p>
+        <span class="card-link">Se videor →</span>
+      </a>
+
+    </div>
   </div>
 
   <footer>
@@ -347,7 +561,7 @@
     <div class="footer-bottom">
       <p>&copy; 2026 Bardun Stall AB. Alla rättigheter förbehållna.</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
       </div>
     </div>
   </footer>
