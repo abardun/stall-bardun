@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metarie — Harstamning &amp; Blodlinjer | Bardun Stall AB</title>
+  <meta name="description" content="Metarie's full pedigree — sire Googoo Gaagaa (US), dam M.T.Kirsten. Complete bloodline tree with grandparents and parent biographies." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stallbardun.com/metarie/harstamning/" />
+  <meta property="og:title" content="Metarie — Harstamning &amp; Blodlinjer | Bardun Stall AB" />
+  <meta property="og:description" content="Metarie's full pedigree — sire Googoo Gaagaa (US), dam M.T.Kirsten. Complete bloodline tree with grandparents and parent biographies." />
+  <meta property="og:image" content="https://stallbardun.com/Metarie.png" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Metarie — Harstamning | Bardun Stall AB" />
+  <meta name="twitter:description" content="Metarie's full pedigree — sire Googoo Gaagaa (US), dam M.T.Kirsten." />
+  <meta name="twitter:image" content="https://stallbardun.com/Metarie.png" />
+  <link rel="canonical" href="https://stallbardun.com/metarie/harstamning/" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A951;
+      --gold-light: #DFC078;
+      --red: #E05B5B;
+      --dark: #0D0D0D;
+      --dark-2: #141414;
+      --dark-3: #1C1C1C;
+      --dark-4: #252525;
+      --navy: #1B4B6E;
+      --white: #FFFFFF;
+      --white-70: rgba(255,255,255,0.7);
+      --white-40: rgba(255,255,255,0.4);
+      --white-10: rgba(255,255,255,0.08);
+      --border: rgba(200,169,81,0.22);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* -- NAV -- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 60px; height: 76px;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; height: 100%; align-self: stretch; }
+    .nav-logo-img {
+      height: 80px; width: 80px; object-fit: cover; border-radius: 0;
+      display: block; flex-shrink: 0;
+      filter: brightness(0) saturate(100%) invert(72%) sepia(38%) saturate(620%) hue-rotate(2deg) brightness(100%);
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--white-70); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+    .nav-back::before { content: '\2190'; font-size: 14px; }
+
+    /* -- HERO -- */
+    .horse-hero {
+      padding-top: 76px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 560px;
+    }
+    .horse-hero-image {
+      background: url('/Metarie.png') center/cover no-repeat;
+      min-height: 480px;
+    }
+    .horse-hero-content {
+      background: var(--dark-2);
+      padding: 64px 72px;
+      display: flex; flex-direction: column; justify-content: center;
+      border-left: 1px solid var(--border);
+    }
+    .horse-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    }
+    .horse-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 6vw, 72px); font-weight: 900;
+      line-height: 1; color: var(--white); margin-bottom: 6px;
+    }
+    .horse-lineage-hero {
+      font-size: 14px; font-weight: 600; color: var(--red);
+      margin-bottom: 28px; letter-spacing: 0.03em;
+    }
+    .pending-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(200,169,81,0.1); border: 1px solid var(--border);
+      border-radius: 2px; padding: 6px 14px; margin-bottom: 24px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .pending-badge::before { content: '\23F3'; font-size: 12px; }
+    .horse-meta-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 4px;
+      overflow: hidden; margin-bottom: 32px;
+    }
+    .horse-meta-item {
+      background: var(--dark-3); padding: 16px 20px;
+    }
+    .horse-meta-label {
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white-40); margin-bottom: 4px;
+    }
+    .horse-meta-value {
+      font-size: 16px; font-weight: 700; color: var(--white);
+    }
+    .horse-meta-value.accent { color: var(--gold); }
+    .horse-meta-value.pending { color: var(--white-40); font-weight: 400; font-style: italic; font-size: 13px; }
+    .horse-desc {
+      font-size: 15px; font-weight: 300; color: var(--white-70);
+      line-height: 1.8; margin-bottom: 28px;
+    }
+    .travsport-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); text-decoration: none;
+      border: 1px solid var(--border); border-radius: 2px; padding: 10px 18px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .travsport-link:hover { background: var(--white-10); border-color: var(--gold); }
+
+    /* -- TABS (sub-nav) -- */
+    .tabs-bar {
+      background: var(--dark-3);
+      border-bottom: 1px solid var(--border);
+      display: flex; gap: 0; padding: 0 60px;
+      position: sticky; top: 76px; z-index: 50;
+    }
+    .tab-btn {
+      background: none; border: none; color: var(--white-40);
+      font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 18px 24px; cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .tab-btn:hover { color: var(--white); }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    /* -- PEDIGREE SECTION -- */
+    .pedigree-section {
+      padding: 72px 60px; max-width: 1200px; margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(26px, 3vw, 42px); font-weight: 900;
+      letter-spacing: -0.02em; text-transform: uppercase;
+      line-height: 1.05; margin-bottom: 8px;
+    }
+    .section-divider { width: 44px; height: 2px; background: var(--gold); margin: 16px 0 36px; }
+
+    /* Pending pedigree notice */
+    .pedigree-pending {
+      background: var(--dark-3); border: 1px solid var(--border);
+      border-left: 3px solid var(--gold); border-radius: 4px;
+      padding: 36px 40px; margin-bottom: 40px;
+    }
+    .pedigree-pending h3 {
+      font-size: 16px; font-weight: 700; color: var(--white);
+      margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .pedigree-pending p {
+      font-size: 14px; font-weight: 300; color: var(--white-70); line-height: 1.8;
+    }
+    .pedigree-pending a { color: var(--gold); }
+
+    /* Pedigree tree */
+    .pedigree-tree {
+      display: grid;
+      grid-template-columns: 200px 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .ped-subject {
+      background: var(--dark-3);
+      border: 2px solid var(--gold);
+      border-radius: 4px 0 0 4px;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative;
+    }
+    .ped-subject::after {
+      content: '';
+      position: absolute; right: -12px; top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-left-color: var(--gold);
+    }
+    .ped-subject-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 900; color: var(--white);
+      margin-bottom: 4px;
+    }
+    .ped-subject-detail {
+      font-size: 11px; color: var(--gold); letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .ped-col-parents { display: flex; flex-direction: column; gap: 0; }
+    .ped-col-grandparents { display: flex; flex-direction: column; gap: 0; }
+    .ped-node {
+      flex: 1;
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; border-left: none;
+      transition: border-color 0.2s;
+    }
+    .ped-node:hover { border-color: rgba(200,169,81,0.5); }
+    .ped-node + .ped-node { border-top: none; }
+    .ped-node.sire { border-top: 1px solid var(--border); }
+    .ped-node.dam { border-bottom: 1px solid var(--border); }
+    .ped-role {
+      font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--white-40); margin-bottom: 4px;
+    }
+    .ped-node-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .ped-node-name.tbc { color: var(--white-40); font-weight: 300; font-style: italic; font-size: 13px; }
+    .ped-node-detail { font-size: 11px; color: var(--white-70); font-weight: 300; }
+    .ped-node-country {
+      font-size: 10px; font-weight: 600; color: var(--gold);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;
+    }
+    .ped-node.grandparent { background: var(--dark-4); }
+    .ped-node.grandparent .ped-node-name { font-size: 13px; }
+
+    /* Parent bios */
+    .parent-bios {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-top: 48px;
+    }
+    .parent-card {
+      background: var(--dark-3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 32px 30px; position: relative; overflow: hidden;
+    }
+    .parent-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gold);
+    }
+    .parent-card.dam::before { background: var(--red); }
+    .parent-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px; display: inline-block; margin-bottom: 14px;
+    }
+    .parent-tag.sire-tag { background: rgba(200,169,81,0.15); color: var(--gold); }
+    .parent-tag.dam-tag { background: rgba(224,91,91,0.15); color: var(--red); }
+    .parent-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .parent-card h3.tbc { color: var(--white-40); font-size: 18px; font-weight: 400; font-style: italic; }
+    .parent-sub {
+      font-size: 12px; color: var(--white-40); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+    .parent-card p { font-size: 14px; font-weight: 300; color: var(--white-70); line-height: 1.8; }
+
+    /* -- RESPONSIVE -- */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .horse-hero { grid-template-columns: 1fr; }
+      .horse-hero-image { min-height: 300px; }
+      .horse-hero-content { padding: 48px 28px; }
+      .tabs-bar { padding: 0 24px; overflow-x: auto; }
+      .pedigree-section { padding: 52px 24px; }
+      .pedigree-tree { grid-template-columns: 1fr; }
+      .ped-subject { border-radius: 4px 4px 0 0; }
+      .ped-subject::after { display: none; }
+      .parent-bios { grid-template-columns: 1fr; }
+    }
+
+    footer {
+      background: var(--dark); padding: 64px 48px 32px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-top: 16px; }
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif; color: var(--white);
+      font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { color: var(--text-muted); font-size: 12px; }
+    .social-links { display: flex; gap: 12px; }
+    .social-link {
+      width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); text-decoration: none; font-size: 14px; transition: all 0.2s;
+    }
+    .social-link:hover { border-color: var(--gold); color: var(--gold); }
+    @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .footer-top { grid-template-columns: 1fr; gap: 36px; } .footer-bottom { flex-direction: column; gap: 16px; text-align: center; } footer { padding: 48px 24px 24px; } }
+
+    @media (min-width: 1400px) {
+      .horse-hero {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
+    </a>
+    <a href="/#horses" class="nav-back">Back to Horses</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="horse-hero">
+    <div class="horse-hero-image"></div>
+    <div class="horse-hero-content">
+      <p class="horse-eyebrow">Horse Profile &middot; Bardun Stall AB</p>
+      <h1 class="horse-name">Metarie</h1>
+      <p class="horse-lineage-hero" id="hero-lineage">Sire: &mdash; &nbsp;|&nbsp; Dam: &mdash;</p>
+      <div class="pending-badge">Pedigree awaiting update</div>
+      <div class="horse-meta-grid">
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">Born</div>
+          <div class="horse-meta-value pending" id="meta-born">&mdash;</div>
+        </div>
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">Debut</div>
+          <div class="horse-meta-value pending" id="meta-debut">&mdash;</div>
+        </div>
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">Gender</div>
+          <div class="horse-meta-value pending" id="meta-gender">&mdash;</div>
+        </div>
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">Breed</div>
+          <div class="horse-meta-value">Standardbred</div>
+        </div>
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">Discipline</div>
+          <div class="horse-meta-value">Trotting</div>
+        </div>
+        <div class="horse-meta-item">
+          <div class="horse-meta-label">UELN</div>
+          <div class="horse-meta-value accent">75200211S222752</div>
+        </div>
+      </div>
+      <p class="horse-desc">Standardbred registered under UELN 75200211S222752, stabled at Bardun Stall AB. Full pedigree confirmed and updated here. Racing results sync every Monday.</p>
+      <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" class="travsport-link">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+        View on Travsport
+      </a>
+    </div>
+  </div>
+
+  <!-- SUB-NAV -->
+  <div class="tabs-bar">
+    <a href="/metarie/" class="tab-btn">Oversikt</a>
+    <a href="/metarie/harstamning/" class="tab-btn active">Harstamning</a>
+    <a href="/metarie/resultat/" class="tab-btn">Resultat</a>
+    <a href="/metarie/videor/" class="tab-btn">Videor</a>
+  </div>
+
+  <!-- PEDIGREE CONTENT -->
+  <div class="pedigree-section">
+    <p class="section-eyebrow">Bloodlines</p>
+    <h2 class="section-title">Pedigree</h2>
+    <div class="section-divider"></div>
+
+    <!-- PENDING NOTICE -->
+    <div class="pedigree-pending" id="pedigree-pending-notice">
+      <h3>Pedigree Pending</h3>
+      <p>
+        The Travsport database is not directly accessible from this environment. To complete Metarie's full pedigree, visit
+        <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank">sportapp.travsport.se/sportinfo/horse/ts793642/pedigree</a>
+        and share the sire name, dam name, birth year and grandparent details. The page will update immediately.
+      </p>
+    </div>
+
+    <!-- PEDIGREE TREE -->
+    <div class="pedigree-tree">
+      <div class="ped-subject">
+        <div class="ped-subject-name">Metarie</div>
+        <div class="ped-subject-detail" id="subject-detail">Standardbred &middot; UELN 75200211S222752</div>
+      </div>
+      <div class="ped-col-parents">
+        <div class="ped-node sire" style="border-left:3px solid var(--gold)">
+          <div class="ped-role">Sire</div>
+          <div class="ped-node-name tbc" id="sire-name">To be confirmed</div>
+          <div class="ped-node-detail" id="sire-detail">Awaiting pedigree data</div>
+          <div class="ped-node-country" id="sire-country"></div>
+        </div>
+        <div class="ped-node dam" style="border-left:3px solid var(--red)">
+          <div class="ped-role">Dam</div>
+          <div class="ped-node-name tbc" id="dam-name">To be confirmed</div>
+          <div class="ped-node-detail" id="dam-detail">Awaiting pedigree data</div>
+          <div class="ped-node-country" id="dam-country"></div>
+        </div>
+      </div>
+      <div class="ped-col-grandparents">
+        <div class="ped-node grandparent" style="border-left:1px solid var(--border)">
+          <div class="ped-role">Paternal Grandsire</div>
+          <div class="ped-node-name tbc" id="pg-sire">&mdash;</div>
+          <div class="ped-node-detail"></div>
+        </div>
+        <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
+          <div class="ped-role">Paternal Granddam</div>
+          <div class="ped-node-name tbc" id="pg-dam">&mdash;</div>
+          <div class="ped-node-detail"></div>
+        </div>
+        <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
+          <div class="ped-role">Maternal Grandsire</div>
+          <div class="ped-node-name tbc" id="mg-sire">&mdash;</div>
+          <div class="ped-node-detail"></div>
+        </div>
+        <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
+          <div class="ped-role">Maternal Granddam</div>
+          <div class="ped-node-name tbc" id="mg-dam">&mdash;</div>
+          <div class="ped-node-detail"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARENT BIOS -->
+    <div class="parent-bios" id="parent-bios">
+      <div class="parent-card">
+        <span class="parent-tag sire-tag">Sire</span>
+        <h3 class="tbc" id="bio-sire-name">Awaiting pedigree data</h3>
+        <p class="parent-sub" id="bio-sire-sub">&mdash;</p>
+        <p id="bio-sire-text">Sire details will appear here once the pedigree has been confirmed from Travsport. Visit the <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport profile</a> to view the full pedigree.</p>
+      </div>
+      <div class="parent-card dam">
+        <span class="parent-tag dam-tag">Dam</span>
+        <h3 class="tbc" id="bio-dam-name">Awaiting pedigree data</h3>
+        <p class="parent-sub" id="bio-dam-sub">&mdash;</p>
+        <p id="bio-dam-text">Dam details will appear here once confirmed. Full maternal pedigree is available on the <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport profile</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // -- PEDIGREE DATA --
+    const PEDIGREE = {
+      name:        'Metarie',
+      horseId:     'ts793642',
+      born:        '2022',
+      debut:       '2024',
+      gender:      'Filly',
+      sire:        'Googoo Gaagaa (US)',
+      sireDetail:  'Stallion \u00b7 USA \u00b7 by Cam\'s Rocket',
+      sireCountry: 'US',
+      sireBio:     'Googoo Gaagaa (US) is an American-bred stallion by Cam\'s Rocket out of Kora\'s Trotter. His sire line traces through Cam\'s Card Shark, placing him in the influential Cam bloodline \u2014 one of North America\'s premier trotting families.',
+      dam:         'M.T.Kirsten',
+      damDetail:   'Mare \u00b7 SWE \u00b7 by Qwerty (FR)',
+      damCountry:  'SWE',
+      damBio:      'M.T.Kirsten is a Swedish-bred mare by the French stallion Qwerty (FR) out of Yankee Candle (US). Her dam\'s sire Yankee Glide (US) gives Metarie a strong American influence on the maternal side through the Yankee line, complementing the Cam bloodline on the paternal side.',
+      pgSire:      'Cam\'s Rocket (US)',
+      pgDam:       'Kora\'s Trotter (US)',
+      mgSire:      'Qwerty (FR)',
+      mgDam:       'Yankee Candle (US)',
+    };
+
+    function applyPedigree() {
+      var p = PEDIGREE;
+      if (!p.sire) return;
+
+      // Hide pending notice
+      document.getElementById('pedigree-pending-notice').style.display = 'none';
+
+      // Hero
+      document.getElementById('hero-lineage').innerHTML =
+        'Sire: ' + p.sire + ' &nbsp;|&nbsp; Dam: ' + (p.dam || '\u2014');
+      if (p.born)   { document.getElementById('meta-born').textContent = p.born; document.getElementById('meta-born').classList.remove('pending'); }
+      if (p.debut)  { document.getElementById('meta-debut').textContent = p.debut; document.getElementById('meta-debut').classList.remove('pending'); }
+      if (p.gender) { document.getElementById('meta-gender').textContent = p.gender; document.getElementById('meta-gender').classList.remove('pending'); }
+      if (p.born && p.gender) {
+        document.getElementById('subject-detail').textContent = p.gender + ' \u00b7 ' + p.born + ' \u00b7 Standardbred';
+      }
+
+      // Tree - sire
+      var sireEl = document.getElementById('sire-name');
+      sireEl.textContent = p.sire;
+      sireEl.classList.remove('tbc');
+      if (p.sireDetail)  document.getElementById('sire-detail').textContent = p.sireDetail;
+      if (p.sireCountry) document.getElementById('sire-country').textContent = p.sireCountry;
+
+      // Tree - dam
+      var damEl = document.getElementById('dam-name');
+      damEl.textContent = p.dam || '\u2014';
+      if (p.dam) damEl.classList.remove('tbc');
+      if (p.damDetail)  document.getElementById('dam-detail').textContent = p.damDetail;
+      if (p.damCountry) document.getElementById('dam-country').textContent = p.damCountry;
+
+      // Grandparents
+      if (p.pgSire) { document.getElementById('pg-sire').textContent = p.pgSire; document.getElementById('pg-sire').classList.remove('tbc'); }
+      if (p.pgDam)  { document.getElementById('pg-dam').textContent  = p.pgDam;  document.getElementById('pg-dam').classList.remove('tbc'); }
+      if (p.mgSire) { document.getElementById('mg-sire').textContent = p.mgSire; document.getElementById('mg-sire').classList.remove('tbc'); }
+      if (p.mgDam)  { document.getElementById('mg-dam').textContent  = p.mgDam;  document.getElementById('mg-dam').classList.remove('tbc'); }
+
+      // Parent bios
+      var bioSire = document.getElementById('bio-sire-name');
+      bioSire.textContent = p.sire;
+      bioSire.classList.remove('tbc');
+      if (p.sireDetail) document.getElementById('bio-sire-sub').textContent = p.sireDetail;
+      if (p.sireBio)    document.getElementById('bio-sire-text').textContent = p.sireBio;
+
+      if (p.dam) {
+        var bioDam = document.getElementById('bio-dam-name');
+        bioDam.textContent = p.dam;
+        bioDam.classList.remove('tbc');
+        if (p.damDetail) document.getElementById('bio-dam-sub').textContent = p.damDetail;
+        if (p.damBio)    document.getElementById('bio-dam-text').textContent = p.damBio;
+      }
+
+      // Hide the pending badge in hero
+      var badge = document.querySelector('.pending-badge');
+      if (badge) badge.style.display = 'none';
+    }
+
+    applyPedigree();
+  </script>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:0">
+          <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
+        </a>
+        <p>Dedicated to excellence in horse owning, racing, and training. Experience championship-caliber horses at Bardun Stall AB.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#services">Horse Owning</a></li>
+          <li><a href="/#services">Racing</a></li>
+          <li><a href="/#services">Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stable</h4>
+        <ul>
+          <li><a href="/#about">Our Story</a></li>
+          <li><a href="/#horses">Our Horses</a></li>
+          <li><a href="/#training">Training</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bardun Stall AB. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
