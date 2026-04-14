@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -343,20 +343,20 @@
     <a href="/" class="nav-logo">
       <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
     </a>
-    <a href="/#horses" class="nav-back">Back to Horses</a>
+    <a href="/#horses" class="nav-back">Tillbaka till hästarna</a>
   </nav>
 
   <!-- HERO -->
   <div class="horse-hero">
     <div class="horse-hero-image"></div>
     <div class="horse-hero-content">
-      <p class="horse-eyebrow">Horse Profile &middot; Bardun Stall AB</p>
+      <p class="horse-eyebrow">Hästprofil &middot; Bardun Stall AB</p>
       <h1 class="horse-name">Metarie</h1>
-      <p class="horse-lineage-hero" id="hero-lineage">Sire: &mdash; &nbsp;|&nbsp; Dam: &mdash;</p>
-      <div class="pending-badge">Pedigree awaiting update</div>
+      <p class="horse-lineage-hero" id="hero-lineage">Far: &mdash; &nbsp;|&nbsp; Mor: &mdash;</p>
+      <div class="pending-badge">Härstamning inväntar uppdatering</div>
       <div class="horse-meta-grid">
         <div class="horse-meta-item">
-          <div class="horse-meta-label">Born</div>
+          <div class="horse-meta-label">Född</div>
           <div class="horse-meta-value pending" id="meta-born">&mdash;</div>
         </div>
         <div class="horse-meta-item">
@@ -364,28 +364,28 @@
           <div class="horse-meta-value pending" id="meta-debut">&mdash;</div>
         </div>
         <div class="horse-meta-item">
-          <div class="horse-meta-label">Gender</div>
+          <div class="horse-meta-label">Kön</div>
           <div class="horse-meta-value pending" id="meta-gender">&mdash;</div>
         </div>
         <div class="horse-meta-item">
-          <div class="horse-meta-label">Breed</div>
+          <div class="horse-meta-label">Ras</div>
           <div class="horse-meta-value">Standardbred</div>
         </div>
         <div class="horse-meta-item">
-          <div class="horse-meta-label">Discipline</div>
-          <div class="horse-meta-value">Trotting</div>
+          <div class="horse-meta-label">Disciplin</div>
+          <div class="horse-meta-value">Trav</div>
         </div>
         <div class="horse-meta-item">
           <div class="horse-meta-label">UELN</div>
           <div class="horse-meta-value accent">75200211S222752</div>
         </div>
       </div>
-      <p class="horse-desc">Standardbred registered under UELN 75200211S222752, stabled at Bardun Stall AB. Full pedigree confirmed and updated here. Racing results sync every Monday.</p>
+      <p class="horse-desc">Standardbred registrerad under UELN 75200211S222752, uppstallad hos Bardun Stall AB. Fullständig härstamning bekräftad och uppdaterad här. Tävlingsresultat synkroniseras varje måndag.</p>
       <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" class="travsport-link">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="14" height="14">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-        View on Travsport
+        Visa på Travsport
       </a>
     </div>
   </div>
@@ -400,17 +400,17 @@
 
   <!-- PEDIGREE CONTENT -->
   <div class="pedigree-section">
-    <p class="section-eyebrow">Bloodlines</p>
-    <h2 class="section-title">Pedigree</h2>
+    <p class="section-eyebrow">Blodlinjer</p>
+    <h2 class="section-title">Härstamning</h2>
     <div class="section-divider"></div>
 
     <!-- PENDING NOTICE -->
     <div class="pedigree-pending" id="pedigree-pending-notice">
-      <h3>Pedigree Pending</h3>
+      <h3>Härstamning inväntas</h3>
       <p>
-        The Travsport database is not directly accessible from this environment. To complete Metarie's full pedigree, visit
+        Travsports databas är inte direkt tillgänglig från denna miljö. För att komplettera Metaries fullständiga härstamning, besök
         <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank">sportapp.travsport.se/sportinfo/horse/ts793642/pedigree</a>
-        and share the sire name, dam name, birth year and grandparent details. The page will update immediately.
+        och dela faderns namn, moderns namn, födelseår och morföräldrarnas uppgifter. Sidan uppdateras omedelbart.
       </p>
     </div>
 
@@ -422,36 +422,36 @@
       </div>
       <div class="ped-col-parents">
         <div class="ped-node sire" style="border-left:3px solid var(--gold)">
-          <div class="ped-role">Sire</div>
-          <div class="ped-node-name tbc" id="sire-name">To be confirmed</div>
-          <div class="ped-node-detail" id="sire-detail">Awaiting pedigree data</div>
+          <div class="ped-role">Fader</div>
+          <div class="ped-node-name tbc" id="sire-name">Ej bekräftad</div>
+          <div class="ped-node-detail" id="sire-detail">Inväntar härstamningsdata</div>
           <div class="ped-node-country" id="sire-country"></div>
         </div>
         <div class="ped-node dam" style="border-left:3px solid var(--red)">
-          <div class="ped-role">Dam</div>
-          <div class="ped-node-name tbc" id="dam-name">To be confirmed</div>
-          <div class="ped-node-detail" id="dam-detail">Awaiting pedigree data</div>
+          <div class="ped-role">Moder</div>
+          <div class="ped-node-name tbc" id="dam-name">Ej bekräftad</div>
+          <div class="ped-node-detail" id="dam-detail">Inväntar härstamningsdata</div>
           <div class="ped-node-country" id="dam-country"></div>
         </div>
       </div>
       <div class="ped-col-grandparents">
         <div class="ped-node grandparent" style="border-left:1px solid var(--border)">
-          <div class="ped-role">Paternal Grandsire</div>
+          <div class="ped-role">Farfar</div>
           <div class="ped-node-name tbc" id="pg-sire">&mdash;</div>
           <div class="ped-node-detail"></div>
         </div>
         <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
-          <div class="ped-role">Paternal Granddam</div>
+          <div class="ped-role">Farmor</div>
           <div class="ped-node-name tbc" id="pg-dam">&mdash;</div>
           <div class="ped-node-detail"></div>
         </div>
         <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
-          <div class="ped-role">Maternal Grandsire</div>
+          <div class="ped-role">Morfar</div>
           <div class="ped-node-name tbc" id="mg-sire">&mdash;</div>
           <div class="ped-node-detail"></div>
         </div>
         <div class="ped-node grandparent" style="border-top:none;border-left:1px solid var(--border)">
-          <div class="ped-role">Maternal Granddam</div>
+          <div class="ped-role">Mormor</div>
           <div class="ped-node-name tbc" id="mg-dam">&mdash;</div>
           <div class="ped-node-detail"></div>
         </div>
@@ -461,16 +461,16 @@
     <!-- PARENT BIOS -->
     <div class="parent-bios" id="parent-bios">
       <div class="parent-card">
-        <span class="parent-tag sire-tag">Sire</span>
-        <h3 class="tbc" id="bio-sire-name">Awaiting pedigree data</h3>
+        <span class="parent-tag sire-tag">Fader</span>
+        <h3 class="tbc" id="bio-sire-name">Inväntar härstamningsdata</h3>
         <p class="parent-sub" id="bio-sire-sub">&mdash;</p>
-        <p id="bio-sire-text">Sire details will appear here once the pedigree has been confirmed from Travsport. Visit the <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport profile</a> to view the full pedigree.</p>
+        <p id="bio-sire-text">Faderns detaljer visas här när härstamningen har bekräftats från Travsport. Besök <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport-profilen</a> för att se fullständig härstamning.</p>
       </div>
       <div class="parent-card dam">
-        <span class="parent-tag dam-tag">Dam</span>
-        <h3 class="tbc" id="bio-dam-name">Awaiting pedigree data</h3>
+        <span class="parent-tag dam-tag">Moder</span>
+        <h3 class="tbc" id="bio-dam-name">Inväntar härstamningsdata</h3>
         <p class="parent-sub" id="bio-dam-sub">&mdash;</p>
-        <p id="bio-dam-text">Dam details will appear here once confirmed. Full maternal pedigree is available on the <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport profile</a>.</p>
+        <p id="bio-dam-text">Moderns detaljer visas här när de har bekräftats. Fullständig maternal härstamning finns på <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/pedigree" target="_blank" style="color:var(--gold)">Travsport-profilen</a>.</p>
       </div>
     </div>
   </div>
@@ -482,7 +482,7 @@
       horseId:     'ts793642',
       born:        '2022',
       debut:       '2024',
-      gender:      'Filly',
+      gender:      'Sto',
       sire:        'Googoo Gaagaa (US)',
       sireDetail:  'Stallion \u00b7 USA \u00b7 by Cam\'s Rocket',
       sireCountry: 'US',
@@ -506,7 +506,7 @@
 
       // Hero
       document.getElementById('hero-lineage').innerHTML =
-        'Sire: ' + p.sire + ' &nbsp;|&nbsp; Dam: ' + (p.dam || '\u2014');
+        'Far: ' + p.sire + ' &nbsp;|&nbsp; Mor: ' + (p.dam || '\u2014');
       if (p.born)   { document.getElementById('meta-born').textContent = p.born; document.getElementById('meta-born').classList.remove('pending'); }
       if (p.debut)  { document.getElementById('meta-debut').textContent = p.debut; document.getElementById('meta-debut').classList.remove('pending'); }
       if (p.gender) { document.getElementById('meta-gender').textContent = p.gender; document.getElementById('meta-gender').classList.remove('pending'); }
@@ -563,34 +563,34 @@
         <a href="/" class="nav-logo" style="margin-bottom:0">
           <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
         </a>
-        <p>Dedicated to excellence in horse owning, racing, and training. Experience championship-caliber horses at Bardun Stall AB.</p>
+        <p>Dedikerade till excellens inom hästägande, tävling och träning. Upplev hästar i mästarklass hos Bardun Stall AB.</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Tjänster</h4>
         <ul>
-          <li><a href="/#services">Horse Owning</a></li>
-          <li><a href="/#services">Racing</a></li>
-          <li><a href="/#services">Training</a></li>
+          <li><a href="/#services">Hästägande</a></li>
+          <li><a href="/#services">Tävling</a></li>
+          <li><a href="/#services">Träning</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Stable</h4>
+        <h4>Stall</h4>
         <ul>
-          <li><a href="/#about">Our Story</a></li>
-          <li><a href="/#horses">Our Horses</a></li>
-          <li><a href="/#training">Training</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/#about">Vår historia</a></li>
+          <li><a href="/#horses">Våra hästar</a></li>
+          <li><a href="/#training">Träning</a></li>
+          <li><a href="/#contact">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Connect</h4>
+        <h4>Socialt</h4>
         <ul>
           <li><a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Bardun Stall AB. All rights reserved.</p>
+      <p>&copy; 2026 Bardun Stall AB. Alla rättigheter förbehållna.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
       </div>
