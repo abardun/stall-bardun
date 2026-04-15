@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stall Bardun AB – Harness Racing Trainer &amp; Horse Ownership in Sweden</title>
+  <meta name="description" content="Stall Bardun AB – harness racing trainer and horse ownership in Östergötland, Sweden. Standardbreds: Metarie, Floripa and Bandida. Interested in owning a racehorse? Get in touch." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.stallbardun.com/en/" />
+  <meta property="og:title" content="Stall Bardun AB – Harness Racing Trainer &amp; Horse Ownership in Sweden" />
+  <meta property="og:description" content="Stall Bardun AB – harness racing trainer and horse ownership in Östergötland, Sweden. Standardbreds: Metarie, Floripa and Bandida. Interested in owning a racehorse? Get in touch." />
+  <meta property="og:image" content="https://www.stallbardun.com/solvalla.webp" />
+  <meta property="og:locale" content="en" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stall Bardun AB – Harness Racing Trainer &amp; Horse Ownership in Sweden" />
+  <meta name="twitter:description" content="Stall Bardun AB – harness racing trainer and horse ownership in Östergötland, Sweden. Standardbreds: Metarie, Floripa and Bandida." />
+  <meta name="twitter:image" content="https://www.stallbardun.com/solvalla.webp" />
+  <link rel="canonical" href="https://www.stallbardun.com/en/" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A951;
+      --gold-light: #DFC078;
+      --dark: #0D0D0D;
+      --dark-2: #141414;
+      --dark-3: #1C1C1C;
+      --dark-4: #252525;
+      --white: #FFFFFF;
+      --white-70: rgba(255,255,255,0.7);
+      --white-40: rgba(255,255,255,0.4);
+      --white-10: rgba(255,255,255,0.08);
+      --border: rgba(200,169,81,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: 80px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo-img {
+      height: 112px;
+      width: 112px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      flex-shrink: 0;
+      filter: brightness(0) saturate(100%) invert(72%) sepia(38%) saturate(620%) hue-rotate(2deg) brightness(100%);
+    }
+
+    nav .nav-logo {
+      height: 100%;
+      align-self: stretch;
+    }
+
+    nav .nav-logo-img {
+      height: 80px;
+      width: 80px;
+      border-radius: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      padding: 9px 22px;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold) !important;
+      color: var(--dark) !important;
+    }
+
+    /* ── LANG TOGGLE ── */
+    .lang-toggle {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white-70);
+      font-size: 18px;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+      flex-shrink: 0;
+    }
+    .lang-toggle:hover {
+      border-color: var(--gold);
+      background: rgba(200,169,81,0.08);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(13,13,13,0.45) 0%, rgba(13,13,13,0.65) 60%, rgba(13,13,13,1) 100%),
+        url('vincennes-racecourse_1581080160.jpg') center/cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      padding: 0 24px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--white-70);
+      max-width: 540px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 15px 38px;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-secondary {
+      padding: 15px 38px;
+      background: transparent;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--white-40);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 100px 60px; }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .section-body {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.85;
+      max-width: 520px;
+    }
+
+    .section-divider {
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 32px;
+    }
+
+    /* ── SERVICES ── */
+    .services {
+      background: var(--dark-2);
+      text-align: center;
+    }
+
+    .services-header { margin-bottom: 64px; }
+    .services-header .section-body { margin: 0 auto; }
+    .services-header .section-divider { margin: 20px auto 0; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 44px 32px 40px;
+      text-align: left;
+      transition: border-color 0.3s, transform 0.3s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.75;
+    }
+
+    .service-learn-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .service-learn-more span { transition: transform 0.2s; }
+    .service-learn-more:hover span { transform: translateX(4px); }
+
+    /* ── FAMILY SECTION ── */
+    .family-section {
+      background: var(--dark-2);
+      padding: 100px 60px;
+    }
+
+    .family-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 64px;
+    }
+
+    .family-title {
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .family-subtitle {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.8;
+    }
+
+    .family-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+    }
+
+    .family-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 40px 36px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .family-card:hover {
+      border-color: rgba(224,91,91,0.4);
+      transform: translateY(-3px);
+    }
+
+    .family-avatar {
+      width: 72px;
+      height: 72px;
+      background: rgba(224,91,91,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: 2px solid var(--border);
+    }
+
+    .family-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .family-info { flex: 1; }
+
+    .family-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .family-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: #E05B5B;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    .family-bio {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.8;
+    }
+
+    /* Our Mission */
+    .mission-block {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 52px 60px;
+    }
+
+    .mission-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .mission-text {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.9;
+    }
+
+    @media (max-width: 768px) {
+      .family-section { padding: 72px 24px; }
+      .family-grid { grid-template-columns: 1fr; }
+      .mission-block { padding: 40px 28px; }
+    }
+
+    /* ── HORSES ── */
+    .horses {
+      background: var(--dark-3);
+    }
+
+    .horses-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 52px;
+    }
+
+    .horses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .horse-card {
+      background: var(--dark-4);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .horse-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+    }
+
+    .horse-img {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .horse-badge {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    .horse-info {
+      padding: 28px 28px 32px;
+    }
+
+    .horse-info h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      letter-spacing: 0.03em;
+    }
+
+    .horse-breed {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .horse-lineage {
+      font-size: 12px;
+      color: #E05B5B;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .horse-info p {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.7;
+    }
+
+    .horse-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--white-10);
+    }
+
+    .horse-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .horse-stat-val {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .horse-stat-key {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white-40);
+    }
+
+    .horse-stat-val.prize { color: var(--gold); }
+
+    /* ── TRAINING ── */
+    .training {
+      background: var(--dark);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 100px 80px;
+    }
+
+    .training-image {
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .training-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .training-badge {
+      position: absolute;
+      bottom: 28px; left: 28px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 16px 22px;
+      border-radius: 2px;
+    }
+
+    .training-badge-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .training-badge-val {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .training-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .training-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      background: var(--white-10);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.7;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      background: var(--dark-2);
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 52px auto 0;
+    }
+
+    .testimonial-card {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 36px 32px;
+      text-align: left;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px; right: 28px;
+      font-size: 72px;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.15;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 46px;
+      height: 46px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .author-role {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      position: relative;
+      padding: 100px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .cta-banner-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(13,13,13,0.88) 0%, rgba(13,13,13,0.7) 100%),
+        url('solvalla.webp') center/cover no-repeat;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .cta-content p {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--white-70);
+      margin-bottom: 44px;
+      line-height: 1.8;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--dark-2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 100px 80px;
+    }
+
+    .contact-info { display: flex; flex-direction: column; }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--white-10);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .contact-detail p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.6;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--dark-3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 44px 40px;
+    }
+
+    .contact-form h3 {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white-70);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--dark-4);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 2px;
+      padding: 12px 16px;
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group select {
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23C8A951' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      cursor: pointer;
+    }
+
+    .form-group select option { background: var(--dark-4); }
+
+    .form-group textarea {
+      height: 110px;
+      resize: none;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--gold-light); }
+
+    /* ── NEWS ── */
+    .news-section { background: var(--dark-3); }
+    .news-header { text-align: center; margin-bottom: 60px; }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .news-card {
+      background: var(--dark-4);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s;
+      text-decoration: none;
+    }
+    .news-card:hover { border-color: var(--gold); }
+    .news-card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--white-40);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .news-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--white);
+    }
+    .news-card-excerpt {
+      font-size: 14px;
+      color: var(--white-70);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .news-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .news-empty {
+      text-align: center;
+      color: var(--white-40);
+      font-size: 15px;
+      grid-column: 1 / -1;
+      padding: 40px 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 60px 80px 32px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 52px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--white-70);
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col ul a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--white-70);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--white-40);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      text-decoration: none;
+      color: var(--white-70);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--white-10);
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 32px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .horses-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      section { padding: 72px 24px; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .about { grid-template-columns: 1fr; }
+      .about-image { min-height: 300px; }
+      .about-content { padding: 60px 28px; }
+      .horses-grid { grid-template-columns: 1fr; }
+      .training { grid-template-columns: 1fr; padding: 72px 28px; gap: 40px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; padding: 72px 28px; gap: 48px; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 48px 24px 24px; }
+      .horses-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+
+    /* Smooth animations */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-reveal].visible {
+      opacity: 1;
+      transform: none;
+    }
+  
+    .lang-switch{display:inline-flex;align-items:center;gap:8px;margin-left:auto;font-size:12px;font-weight:500;letter-spacing:0.12em}
+    .lang-switch .lang-active{color:#c9a961}
+    .lang-switch .lang-sep{color:rgba(255,255,255,0.4)}
+    .lang-switch .lang-other{color:rgba(255,255,255,0.7);text-decoration:none;transition:color .2s}
+    .lang-switch .lang-other:hover{color:#c9a961}
+    /*LANGSWITCH-INJECTED*/
+  </style>
+
+  <!-- SEO: Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "Bardun Stall AB",
+    "alternateName": "Stall Bardun",
+    "sport": "Harness Racing",
+    "description": "Harness racing trainer and horse ownership in Sweden. Standardbreds: Metarie, Floripa and Bandida — trained by Jonathan Bardun at Mantorp Travbana.",
+    "url": "https://www.stallbardun.com",
+    "location": {
+      "@type": "Place",
+      "name": "Mantorp Travbana",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Östergötland",
+        "addressCountry": "SE"
+      }
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Jonathan Bardun",
+        "jobTitle": "Harness racing trainer and driver",
+        "description": "Harness racing trainer at Stall Bardun AB, Mantorp Travbana. Competes at Solvalla, Färjestad, Mantorp, Gävle, Eskilstuna and Örebro."
+      },
+      {
+        "@type": "Person",
+        "name": "Andreas Bardun",
+        "jobTitle": "Founder and horse owner"
+      }
+    ],
+    "owns": [
+      {
+        "@type": "Thing",
+        "name": "Metarie",
+        "description": "Standardbred, born 2022. Trainer: Jonathan Bardun. UELN: 75200211S222752."
+      },
+      {
+        "@type": "Thing",
+        "name": "Floripa",
+        "description": "Standardbred, born 2023. Daughter of Father Patrick. Racing debut 2025. UELN: 75200211S231295."
+      },
+      {
+        "@type": "Thing",
+        "name": "Bandida",
+        "description": "Standardbred, born 2024. Daughter of Gimpanzee (US). Unraced. UELN: 75200211S242649."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#services" id="nav-services">Services</a></li>
+      <li><a href="#horses" id="nav-horses">Our Horses</a></li>
+      <li><a href="#training" id="nav-training">Training</a></li>
+      <li><a href="#news" id="nav-news">News</a></li>
+      <li><a href="#contact" class="nav-cta" id="nav-contact">Contact Us</a></li>
+    </ul>
+        <div class="lang-switch"><a id="lang-alt" href="/sv/" class="lang-other">SV</a><span class="lang-sep">|</span><span class="lang-active">EN</span></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Bardun Stall AB</div>
+      <h1>Where <span>Champions</span><br>Are Born</h1>
+      <p class="hero-sub">Dedicated to excellence in horse owning, racing, training, and breeding. Experience championship-caliber horsemanship.</p>
+      <div class="hero-buttons">
+        <a href="#horses" class="btn-primary">Our Horses</a>
+        <a href="#contact" class="btn-secondary">Become an Owner</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- FAMILY -->
+  <section class="family-section" id="about">
+    <div class="family-header" data-reveal>
+      <h2 class="family-title">Meet the Bardun Family</h2>
+      <p class="family-subtitle">Built on passion, trust, and performance — the Bardun family is dedicated to creating champions both on and off the track.</p>
+    </div>
+
+    <div class="family-grid" data-reveal>
+
+      <!-- Andreas -->
+      <div class="family-card">
+        <div class="family-avatar">
+          <img src="/andreasbardunphoto.jpeg" alt="Andreas Bardun" />
+        </div>
+        <div class="family-info">
+          <h3 class="family-name">Andreas Bardun</h3>
+          <p class="family-role">Founder, Owner &amp; Investor</p>
+          <p class="family-bio">Andreas Bardun is the driving force behind the stable, combining business expertise with a lifelong passion for horse racing. As founder, owner, and lead investor, Andreas is committed to building a world-class operation where tradition meets innovation. His vision focuses on developing championship-caliber horses while fostering lasting partnerships with owners and racing enthusiasts.</p>
+        </div>
+      </div>
+
+      <!-- Jonathan -->
+      <div class="family-card">
+        <div class="family-avatar">
+          <img src="https://media.trmedia.se/w_600,ar_1:1,c_fill,f_auto,fl_lossy,q_auto,g_xy_center,x_1680,y_975/trais/et5tieakxw378hxmxbdk" alt="Jonathan Bardun" />
+        </div>
+        <div class="family-info">
+          <h3 class="family-name">Jonathan Bardun</h3>
+          <p class="family-role">Driver &amp; Head Trainer</p>
+          <p class="family-bio">Jonathan Bardun's development as a trotting trainer and driver includes an important chapter in the United States, where he spent two years working with Marcus Melander in a demanding, high-performance trotting environment. The experience gave him valuable exposure to elite routines, daily stable discipline, and race preparation at a high professional level. Since returning to Sweden, he has channelled that international experience into his own operation, helping shape a young stable built on ambition, dedication, and modern thinking.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Our Mission -->
+    <div class="mission-block" data-reveal>
+      <h3 class="mission-title">Our Mission</h3>
+      <p class="mission-text">At Bardun Racing Stable, we believe that champions are made through dedication, expertise, and an unwavering commitment to excellence. Every horse in our care receives individualized attention, from world-class training facilities to personalized nutrition and conditioning programs. We don't just race horses — we build legacies.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-header" data-reveal>
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">Excellence Across Every Discipline</h2>
+      <div class="section-divider"></div>
+      <p class="section-body">Whether you're a first-time owner or a seasoned racing investor, Bardun Racing Stable delivers a complete, world-class experience.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-reveal>
+        <span class="service-icon">🏆</span>
+        <h3>Horse Owning</h3>
+        <p>Whether you are looking to own a horse, explore shared ownership in trotting horses, or get expert advice on purchasing, we can help.</p>
+        <a href="#contact" class="service-learn-more">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card" data-reveal>
+        <span class="service-icon">🎯</span>
+        <h3>Training</h3>
+        <p>Our preferred trainer, Jonathan Bardun, has developed a bespoke training methodology designed to optimise both performance and horse wellbeing. Together with groom Dasha, he has built a unique philosophy centred on the horse's welfare, development, and peak performance.</p>
+        <a href="#training" class="service-learn-more">Learn More <span>→</span></a>
+      </div>
+      <div class="service-card" data-reveal>
+        <span class="service-icon">🥇</span>
+        <h3>Racing</h3>
+        <p>Our horses compete at the highest levels, with every detail carefully managed in preparation for race day. Our preferred driver is Jonathan Bardun, one of the rising stars of Swedish trotting.</p>
+        <a href="#horses" class="service-learn-more">Learn More <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORSES -->
+  <section class="horses" id="horses">
+    <div class="horses-header" data-reveal>
+      <div>
+        <p class="section-eyebrow">Our Champion Horses</p>
+        <h2 class="section-title">Meet the Standardbreds</h2>
+        <div class="section-divider"></div>
+        <p class="section-body" style="max-width:600px">Meet the exceptional standardbreds that represent the pinnacle of harness racing excellence at Bardun Stall AB.</p>
+      </div>
+      <a href="#horses" class="btn-secondary">View All Horses</a>
+    </div>
+    <div class="horses-grid">
+
+      <!-- FLORIPA -->
+      <div class="horse-card" data-reveal>
+        <div class="horse-img" style="background-image: url('floripa.png')">
+          <span class="horse-badge">Active Racer</span>
+        </div>
+        <div class="horse-info">
+          <h3>Floripa</h3>
+          <p class="horse-lineage">Sire: Father Patrick &nbsp;|&nbsp; Dam: Gazelle Am</p>
+          <p>Born 2023 and debut in 2025. A daughter of world champion Father Patrick ($2.6M career earnings), combining elite trotting bloodlines with exceptional natural ability.</p>
+          <div class="horse-stats">
+            <div class="horse-stat">
+              <span class="horse-stat-val">2023</span>
+              <span class="horse-stat-key">Born</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">2025</span>
+              <span class="horse-stat-key">Debut</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">Filly</span>
+              <span class="horse-stat-key">Gender</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val prize" id="floripa-prize">114 400 kr</span>
+              <span class="horse-stat-key" id="lbl-prize-floripa">Prize Money</span>
+            </div>
+          </div>
+          <a href="/en/floripa/" class="service-learn-more" style="margin-top:18px">Full Profile &amp; Results <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- METARIE -->
+      <div class="horse-card" data-reveal>
+        <div class="horse-img" style="background-image: url('Metarie.png')">
+          <span class="horse-badge">Rising Star</span>
+        </div>
+        <div class="horse-info">
+          <h3>Metarie</h3>
+          <p class="horse-lineage">Sire: Googoo Gaagaa (US) &nbsp;|&nbsp; Dam: M.T.Kirsten</p>
+          <p>Born 2022 and debuting in 2024. By Googoo Gaagaa (US) out of M.T.Kirsten — combining American and French trotting bloodlines. Full pedigree and racing history available on the profile page, updated every Monday.</p>
+          <div class="horse-stats">
+            <div class="horse-stat">
+              <span class="horse-stat-val">2022</span>
+              <span class="horse-stat-key">Born</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">2024</span>
+              <span class="horse-stat-key">Debut</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">Filly</span>
+              <span class="horse-stat-key">Gender</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val prize" id="metarie-prize">356 000 kr</span>
+              <span class="horse-stat-key" id="lbl-prize-metarie">Prize Money</span>
+            </div>
+          </div>
+          <a href="/en/metarie/" class="service-learn-more" style="margin-top:18px">Full Profile &amp; Results <span>→</span></a>
+        </div>
+      </div>
+
+      <!-- BANDIDA -->
+      <div class="horse-card" data-reveal>
+        <div class="horse-img" style="background-image: url('Bandida.png')">
+          <span class="horse-badge" style="background:var(--dark-3);color:var(--white-70);border:1px solid var(--border)">Unstarted</span>
+        </div>
+        <div class="horse-info">
+          <h3>Bandida</h3>
+          <p class="horse-lineage">Sire: Gimpanzee (US) &nbsp;|&nbsp; Dam: Don't Let Her (US)</p>
+          <p>Born in 2024, this filly by Gimpanzee (US) out of Don't Let Her (US) was acquired at the 2025 yearling sale for SEK 160,000. Unstarted and full of promise, she is one to watch ahead of her debut.</p>
+          <div class="horse-stats">
+            <div class="horse-stat">
+              <span class="horse-stat-val">2024</span>
+              <span class="horse-stat-key">Born</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">Awaited</span>
+              <span class="horse-stat-key">Debut</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val">Filly</span>
+              <span class="horse-stat-key">Gender</span>
+            </div>
+            <div class="horse-stat">
+              <span class="horse-stat-val prize" id="bandida-prize">—</span>
+              <span class="horse-stat-key" id="lbl-prize-bandida">Prize Money</span>
+            </div>
+          </div>
+          <a href="/en/bandida/" class="service-learn-more" style="margin-top:18px">Full Profile <span>→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <div class="training" id="training">
+    <div class="training-image" data-reveal>
+      <img src="https://media.trmedia.se/w_900,c_fill,f_auto,fl_lossy,q_auto,g_xy_center,x_1680,y_975/trais/et5tieakxw378hxmxbdk" alt="Jonathan Bardun, Trainer &amp; Driver — Bardun Stall AB" />
+      <div class="training-badge">
+        <div class="training-badge-title">Photo</div>
+        <div class="training-badge-val">Jonathan Bardun</div>
+      </div>
+    </div>
+    <div class="training-content" data-reveal>
+      <p class="section-eyebrow">Training Philosophy</p>
+      <h2 class="section-title">The Horse First. Always.</h2>
+      <div class="section-divider"></div>
+      <p class="section-body">Stall Bardun has chosen Jonathan Bardun and JB Racing Stable as our preferred trainer and driver, because their approach is built on fundamental principles we consider absolutely essential. At Stall Bardun, every decision is made with the horse's wellbeing and long-term development at the centre. We are convinced that a horse that feels safe, healthy, and is allowed to develop at its own pace has the best conditions to perform over time. When the foundation is right, results come naturally.</p>
+      <div class="training-steps">
+        <div class="training-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Individual Development</h4>
+            <p>No two horses are the same. Each horse's programme is built around its own temperament, physiology, and stage of development — never a one-size-fits-all schedule.</p>
+          </div>
+        </div>
+        <div class="training-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Patience Over Pressure</h4>
+            <p>We take the time to build genuine fitness and confidence before competition. Rushing a horse into racing before it is ready is never an option here.</p>
+          </div>
+        </div>
+        <div class="training-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Welfare as a Standard</h4>
+            <p>Daily welfare checks, careful workload management, and regular veterinary input ensure every horse in the stable is physically sound and mentally content.</p>
+          </div>
+        </div>
+        <div class="training-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Long-Term Thinking</h4>
+            <p>We are building careers, not chasing single results. Each race is one step in a longer journey, and the horse's soundness and enjoyment of the sport always comes first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="cta-banner-bg"></div>
+    <div class="cta-content" data-reveal>
+      <p class="section-eyebrow" style="justify-content:center;display:flex;">Ready to Own a Champion?</p>
+      <h2><span style="color:var(--gold)">Join Us</span></h2>
+      <p id="cta-body">Whether you want to own a horse outright, explore shared ownership or investment, place a horse in training, or get expert guidance on buying — we can help. Get in touch to discuss the right approach for you.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#services" class="btn-secondary">Explore Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact" id="contact">
+    <div class="contact-info">
+      <p class="section-eyebrow">Contact Us</p>
+      <h2 class="section-title">Let's Talk<br>Horses</h2>
+      <div class="section-divider"></div>
+      <p class="section-body">Whether you're interested in ownership, training, breeding, or just want to learn more about what we do — our team is here to answer every question.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-detail">
+            <h4>Location</h4>
+            <p>Mantorp Travbana</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-detail">
+            <h4>Email</h4>
+            <p><a href="mailto:andreas@stallbardun.com" style="color:var(--white-70);text-decoration:none;">andreas@stallbardun.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form" data-reveal>
+      <h3 id="form-title">Send Us a Message</h3>
+      <form id="contact-form" action="https://formspree.io/f/meevqyzg" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label id="lbl-firstname">First Name</label>
+            <input type="text" name="first-name" placeholder="Andreas" required />
+          </div>
+          <div class="form-group">
+            <label id="lbl-lastname">Last Name</label>
+            <input type="text" name="last-name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="lbl-emailaddr">Email Address</label>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label id="lbl-interest">Area of Interest</label>
+          <select name="interest">
+            <option value="" id="sel-placeholder">Select a service...</option>
+            <option id="sel-opt1">Horse Owning / Syndicate</option>
+            <option id="sel-opt2">Racing</option>
+            <option id="sel-opt3">Training</option>
+            <option id="sel-opt5">General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="lbl-message">Message</label>
+          <textarea name="message" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="form-submit-btn">Send Message →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <section class="news-section" id="news">
+    <div class="news-header" data-reveal>
+      <p class="section-eyebrow" id="news-eyebrow">In the Press</p>
+      <h2 class="section-title" id="news-title">Latest News</h2>
+      <div class="section-divider" style="margin:20px auto 0"></div>
+    </div>
+    <div class="news-grid" id="news-grid">
+      <p class="news-empty" id="news-empty">No articles yet — check back soon.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom:0">
+          <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
+        </a>
+        <p id="footer-desc">Dedicated to excellence in horse owning, racing and training. Experience championship-caliber horses at Bardun Stall AB.</p>
+      </div>
+      <div class="footer-col">
+        <h4 id="footer-services-h">Services</h4>
+        <ul>
+          <li><a href="#services" id="footer-owning">Horse Owning</a></li>
+          <li><a href="#services" id="footer-racing">Racing</a></li>
+          <li><a href="#services" id="footer-training">Training</a></li>
+          <li><a href="#services" id="footer-breeding">Breeding</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 id="footer-stable-h">Stable</h4>
+        <ul>
+          <li><a href="#about" id="footer-story">Our Story</a></li>
+          <li><a href="#horses" id="footer-horses">Our Horses</a></li>
+          <li><a href="#training" id="footer-training2">Training</a></li>
+          <li><a href="#contact" id="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 id="footer-connect-h">Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" style="display:flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footer-copy">© 2026 Bardun Stall AB. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61575639625862" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.style.background = 'rgba(13,13,13,0.98)';
+        navbar.style.boxShadow = '0 2px 24px rgba(0,0,0,0.5)';
+      } else {
+        navbar.style.background = 'rgba(13,13,13,0.92)';
+        navbar.style.boxShadow = 'none';
+      }
+    });
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Form submit handler — submit to Formspree
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(resp) {
+        if (resp.ok) {
+          var msg = document.documentElement.lang === 'sv'
+            ? 'Tack för ditt meddelande. Vårt team återkommer till dig inom kort.'
+            : 'Thank you for your message. Our team will be in touch shortly.';
+          alert(msg);
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      }).catch(function() {
+        var errMsg = document.documentElement.lang === 'sv'
+          ? 'Något gick fel. Skicka ett mejl till andreas@stallbardun.com istället.'
+          : 'Something went wrong. Please email andreas@stallbardun.com instead.';
+        alert(errMsg);
+      });
+    });
+  </script>
+
+  <script>
+  /* ── TRANSLATIONS ── */
+  const TRANSLATIONS = {
+    en: {
+      // Nav
+      nav_about: 'About', nav_services: 'Services', nav_horses: 'Our Horses',
+      nav_training: 'Training', nav_news: 'News', nav_contact: 'Contact Us',
+      // Hero
+      hero_h1: 'Where <span>Champions</span><br>Are Born',
+      hero_sub: 'Dedicated to excellence in horse owning, racing, training, and breeding. Experience championship-caliber horsemanship.',
+      hero_btn1: 'Our Horses', hero_btn2: 'Become an Owner', hero_scroll: 'Scroll',
+      // Stats
+      stat1: 'Race Victories', stat2: 'Champion Horses', stat3: 'Years of Excellence', stat4: 'Owner Satisfaction',
+      // Family
+      family_title: 'Meet the Bardun Family',
+      family_sub: 'Built on passion, trust, and performance — the Bardun family is dedicated to creating champions both on and off the track.',
+      andreas_role: 'Founder, Owner &amp; Investor',
+      andreas_bio: 'Andreas Bardun is the driving force behind the stable, combining business expertise with a lifelong passion for horse racing. As founder, owner, and lead investor, Andreas is committed to building a world-class operation where tradition meets innovation. His vision focuses on developing championship-caliber horses while fostering lasting partnerships with owners and racing enthusiasts.',
+      jonathan_role: 'Driver &amp; Head Trainer',
+      jonathan_bio: 'Jonathan Bardun\'s development as a trotting trainer and driver includes an important chapter in the United States, where he spent two years working with Marcus Melander in a demanding, high-performance trotting environment. The experience gave him valuable exposure to elite routines, daily stable discipline, and race preparation at a high professional level. Since returning to Sweden, he has channelled that international experience into his own operation, helping shape a young stable built on ambition, dedication, and modern thinking.',
+      mission_title: 'Our Mission',
+      mission_text: 'At Bardun Racing Stable, we believe that champions are made through dedication, expertise, and an unwavering commitment to excellence. Every horse in our care receives individualized attention, from world-class training facilities to personalized nutrition and conditioning programs. We don\'t just race horses — we build legacies.',
+      // Services
+      svc_eyebrow: 'What We Offer', svc_title: 'Excellence Across Every Discipline',
+      svc_body: 'Whether you\'re a first-time owner or a seasoned racing investor, Bardun Racing Stable delivers a complete, world-class experience.',
+      svc1_title: 'Horse Owning', svc1_text: 'Whether you are looking to own a horse, explore shared ownership in trotting horses, or get expert advice on purchasing, we can help.',
+      svc2_title: 'Training', svc2_text: 'Our preferred trainer, Jonathan Bardun, has developed a bespoke training methodology designed to optimise both performance and horse wellbeing. Together with groom Dasha, he has built a unique philosophy centred on the horse\'s welfare, development, and peak performance.',
+      svc3_title: 'Racing', svc3_text: 'Our horses compete at the highest levels, with every detail carefully managed in preparation for race day. Our preferred driver is Jonathan Bardun, one of the rising stars of Swedish trotting.',
+      learn_more: 'Learn More',
+      // Horses
+      horses_eyebrow: 'Our Champion Horses', horses_title: 'Meet the Standardbreds',
+      horses_body: 'Meet the exceptional standardbreds that represent the pinnacle of harness racing excellence at Bardun Stall AB.',
+      horses_view_all: 'View All Horses',
+      badge_active: 'Active Racer', badge_rising: 'Rising Star', badge_unstarted: 'Unstarted',
+      floripa_desc: 'Born 2023 and debut in 2025. A daughter of world champion Father Patrick ($2.6M career earnings), combining elite trotting bloodlines with exceptional natural ability.',
+      metarie_desc: 'Born 2022 and debuting in 2024. By Googoo Gaagaa (US) out of M.T.Kirsten — combining American and French trotting bloodlines. Full pedigree and racing history available on the profile page, updated every Monday.',
+      bandida_desc: 'Born in 2024, this filly by Gimpanzee (US) out of Don\'t Let Her (US) was acquired at the 2025 yearling sale for SEK 160,000. Unstarted and full of promise, she is one to watch ahead of her debut.',
+      lbl_born: 'Born', lbl_debut: 'Debut', lbl_gender: 'Gender', lbl_filly: 'Filly', lbl_awaited: 'Awaited', lbl_prize: 'Prize Money',
+      full_profile_results: 'Full Profile &amp; Results', full_profile: 'Full Profile',
+      // Training
+      trn_eyebrow: 'Training Philosophy', trn_title: 'The Horse First. Always.',
+      trn_body: 'Stall Bardun has chosen Jonathan Bardun and JB Racing Stable as our preferred trainer and driver, because their approach is built on fundamental principles we consider absolutely essential. At Stall Bardun, every decision is made with the horse\'s wellbeing and long-term development at the centre. We are convinced that a horse that feels safe, healthy, and is allowed to develop at its own pace has the best conditions to perform over time. When the foundation is right, results come naturally.',
+      trn_photo: 'Photo',
+      trn1_title: 'Individual Development', trn1_text: 'No two horses are the same. Each horse\'s programme is built around its own temperament, physiology, and stage of development — never a one-size-fits-all schedule.',
+      trn2_title: 'Patience Over Pressure', trn2_text: 'We take the time to build genuine fitness and confidence before competition. Rushing a horse into racing before it is ready is never an option here.',
+      trn3_title: 'Welfare as a Standard', trn3_text: 'Daily welfare checks, careful workload management, and regular veterinary input ensure every horse in the stable is physically sound and mentally content.',
+      trn4_title: 'Long-Term Thinking', trn4_text: 'We are building careers, not chasing single results. Each race is one step in a longer journey, and the horse\'s soundness and enjoyment of the sport always comes first.',
+      // CTA
+      cta_eyebrow: 'Ready to Own a Champion?', cta_title: 'Join Us',
+      cta_body: 'Whether you want to own a horse outright, explore shared ownership or investment, place a horse in training, or get expert guidance on buying — we can help. Get in touch to discuss the right approach for you.',
+      cta_btn1: 'Get in Touch', cta_btn2: 'Explore Services',
+      // Contact
+      contact_eyebrow: 'Contact Us', contact_title: 'Let\'s Talk<br>Horses',
+      contact_body: 'Whether you\'re interested in ownership, training, breeding, or just want to learn more about what we do — our team is here to answer every question.',
+      lbl_location: 'Location', lbl_email: 'Email',
+      form_title: 'Send Us a Message',
+      lbl_firstname: 'First Name', lbl_lastname: 'Last Name', lbl_emailaddr: 'Email Address',
+      lbl_interest: 'Area of Interest', lbl_message: 'Message',
+      ph_firstname: 'Andreas', ph_lastname: 'Smith', ph_email: 'you@example.com',
+      ph_message: 'Tell us what you\'re looking for...',
+      sel_placeholder: 'Select a service...',
+      sel_opt1: 'Horse Owning / Syndicate', sel_opt2: 'Racing', sel_opt3: 'Training',
+      sel_opt5: 'General Enquiry',
+      form_submit: 'Send Message →',
+      // Footer
+      footer_desc: 'Dedicated to excellence in horse owning, racing and training. Experience championship-caliber horses at Bardun Stall AB.',
+      footer_services: 'Services', footer_stable: 'Stable', footer_connect: 'Connect',
+      footer_owning: 'Horse Owning', footer_racing: 'Racing', footer_training: 'Training', footer_breeding: 'Breeding',
+      footer_story: 'Our Story', footer_horses: 'Our Horses', footer_contact: 'Contact',
+      footer_copy: '© 2026 Bardun Stall AB. All rights reserved.',
+      news_eyebrow: 'In the Press', news_title: 'Latest News',
+      lang_btn: '🇸🇪'
+    },
+    sv: {
+      // Nav
+      nav_about: 'Om oss', nav_services: 'Tjänster', nav_horses: 'Våra hästar',
+      nav_training: 'Träning', nav_news: 'Nyheter', nav_contact: 'Kontakta oss',
+      // Hero
+      hero_h1: 'Här föds <span>mästare</span>',
+      hero_sub: 'Dedikerade till spetskompetens inom hästägande, tävlingskörning och träning. Upplev förstklassig svensk travsport.',
+      hero_btn1: 'Våra hästar', hero_btn2: 'Bli delägare', hero_scroll: 'Scrolla',
+      // Stats
+      stat1: 'Tävlingssegrar', stat2: 'Mästarhästar', stat3: 'År av spetskompetens', stat4: 'Ägarnas nöjdhet',
+      // Family
+      family_title: 'Möt familjen Bardun',
+      family_sub: 'Grundat på passion, förtroende och prestation — familjen Bardun är dedikerade till att skapa mästare på och utanför banan.',
+      andreas_role: 'Grundare, ägare &amp; investerare',
+      andreas_bio: 'Andreas Bardun är drivkraften bakom stallet och kombinerar affärsmässig erfarenhet med en livslång passion för travsport. Som grundare, ägare och huvudinvesterare är Andreas fast besluten att bygga en verksamhet i världsklass där tradition möter innovation. Hans vision fokuserar på att utveckla hästar av mästarklass och skapa varaktiga partnerskap med ägare och travintresserade.',
+      jonathan_role: 'Kusk &amp; chefstränare',
+      jonathan_bio: 'Jonathans utveckling som travtränare och körsven innefattar ett viktigt kapitel i USA, där han tillbringade två år hos Marcus Melander i en krävande träningsmiljö på hög nivå. Erfarenheten gav honom värdefull inblick i elitrutiner, daglig stalldisciplin och tävlingsförberedelser på professionell nivå. Sedan han återvände till Sverige har han kanaliserat den internationella erfarenheten in i sin egen verksamhet och hjälpt till att forma ett ungt stall byggt på ambition, dedikation och modernt tänkande.',
+      mission_title: 'Vårt uppdrag',
+      mission_text: 'På Bardun Stall tror vi att mästare skapas genom hängivenhet, expertis och ett orubbligt engagemang för spets. Varje häst i vår vård får individuell uppmärksamhet. Vi tävlar inte bara med hästar — vi bygger arv.',
+      // Services
+      svc_eyebrow: 'Vad vi erbjuder', svc_title: 'Spetskompetens inom varje disciplin',
+      svc_body: 'Oavsett om du är en förstagångsägare eller en erfaren tävlingsinvesterare levererar Bardun Stall AB en komplett upplevelse av världsklass.',
+      svc1_title: 'Hästägande', svc1_text: 'Oavsett om du vill äga en häst, utforska delägarskap i travhästar eller få expertråd inför ett köp — vi kan hjälpa dig.',
+      svc2_title: 'Träning', svc2_text: 'Vår föredragna tränare, Jonathan Bardun, har utvecklat en skräddarsydd träningsmetodik utformad för att optimera både prestation och hästens välmående. Tillsammans med skötaren Dasha har han byggt en unik filosofi centrerad kring hästens välmående, utveckling och toppprestation.',
+      svc3_title: 'Tävling', svc3_text: 'Våra hästar tävlar på högsta nivå, med varje detalj noggrant hanterad inför tävlingsdagen. Vår föredragna kusk är Jonathan Bardun, en av de mest lovande stjärnorna inom svensk travsport.',
+      learn_more: 'Läs mer',
+      // Horses
+      horses_eyebrow: 'Våra mästarhästar', horses_title: 'Möt travhästarna',
+      horses_body: 'Möt de enastående standardbreds som representerar spetsen av travsporten på Bardun Stall AB.',
+      horses_view_all: 'Se alla hästar',
+      badge_active: 'Aktiv tävlingshäst', badge_rising: 'Stjärna på uppgång', badge_unstarted: 'Ej startad',
+      floripa_desc: 'Född 2023 med debut 2025. Dotter till världsmästaren Father Patrick (2,6 M$ i karriärvinster), som kombinerar elit-travblodlinjer med enastående naturlig förmåga.',
+      metarie_desc: 'Född 2022 med debut 2024. Av Googoo Gaagaa (US) ur M.T.Kirsten — kombinerar amerikanska och franska travblodlinjer. Fullständigt stamträd och tävlingshistorik finns på profilsidan, uppdateras varje måndag.',
+      bandida_desc: 'Född 2024, detta sto av Gimpanzee (US) ur Don\'t Let Her (US) förvärvades på unghästauktionen 2025 för 160 000 kr. Ännu ej startad och full av löften — en att hålla ögonen på inför debuten.',
+      lbl_born: 'Född', lbl_debut: 'Debut', lbl_gender: 'Kön', lbl_filly: 'Sto', lbl_awaited: 'Inväntas', lbl_prize: 'Prispengar',
+      full_profile_results: 'Fullständig profil &amp; resultat', full_profile: 'Fullständig profil',
+      // Training
+      trn_eyebrow: 'Träningsfilosofi', trn_title: 'Hästen i centrum. Alltid.',
+      trn_body: 'Stall Bardun har valt Jonathan Bardun och JB Racing Stable som föredragen tränare och kusk, eftersom deras arbetssätt vilar på grundläggande principer som vi ser som helt avgörande. På Stall Bardun fattas varje beslut med hästens välmående och långsiktiga utveckling i centrum. Vi är övertygade om att en häst som är trygg, frisk och får utvecklas i sin egen takt också har bäst förutsättningar att prestera över tid. När grunden är rätt kommer resultaten naturligt.',
+      trn_photo: 'Foto',
+      trn1_title: 'Individuell utveckling', trn1_text: 'Inga hästar är likadana. Varje hästs program byggs kring dess eget temperament, fysiologi och utvecklingsstadium — aldrig ett schema för alla.',
+      trn2_title: 'Tålamod framför press', trn2_text: 'Vi tar oss tid att bygga upp verklig kondition och självförtroende innan tävling. Att rusa en häst ut i tävling innan den är redo är aldrig ett alternativ här.',
+      trn3_title: 'Välmående som standard', trn3_text: 'Dagliga kontroller, noggrann arbetsbördehantering och regelbunden veterinär uppföljning säkerställer att varje häst i stallet är fysiskt sund och mentalt välmående.',
+      trn4_title: 'Långsiktigt tänkande', trn4_text: 'Vi bygger karriärer, inte jagar enskilda resultat. Varje lopp är ett steg på en längre resa, och hästens hälsa och glädje för sporten sätts alltid först.',
+      // CTA
+      cta_eyebrow: 'Redo att äga en mästare?', cta_title: 'Gå med oss',
+      cta_body: 'Oavsett om du vill äga en häst helt, utforska delägarskap eller investering, placera en häst i träning, eller få experthjälp vid köp — vi kan hjälpa dig. Kontakta oss för att diskutera vad som passar dig bäst.',
+      cta_btn1: 'Kontakta oss', cta_btn2: 'Utforska tjänster',
+      // Contact
+      contact_eyebrow: 'Kontakta oss', contact_title: 'Låt oss prata<br>hästar',
+      contact_body: 'Oavsett om du är intresserad av ägande, träning eller bara vill lära dig mer om vad vi gör — vårt team finns här för att svara på alla frågor.',
+      lbl_location: 'Plats', lbl_email: 'E-post',
+      form_title: 'Skicka ett meddelande',
+      lbl_firstname: 'Förnamn', lbl_lastname: 'Efternamn', lbl_emailaddr: 'E-postadress',
+      lbl_interest: 'Intresseområde', lbl_message: 'Meddelande',
+      ph_firstname: 'Andreas', ph_lastname: 'Svensson', ph_email: 'du@example.com',
+      ph_message: 'Berätta vad du letar efter...',
+      sel_placeholder: 'Välj en tjänst...',
+      sel_opt1: 'Hästägande / Delägarskap', sel_opt2: 'Tävling', sel_opt3: 'Träning',
+      sel_opt5: 'Allmän förfrågan',
+      form_submit: 'Skicka meddelande →',
+      // Footer
+      footer_desc: 'Dedikerade till spetskompetens inom trav ägande, tävlingskörning och träning. Upplev travhästar av mästarklass på Bardun Stall AB.',
+      footer_services: 'Tjänster', footer_stable: 'Stallet', footer_connect: 'Följ oss',
+      footer_owning: 'Hästägande', footer_racing: 'Tävling', footer_training: 'Träning', footer_breeding: 'Avel',
+      footer_story: 'Vår historia', footer_horses: 'Våra hästar', footer_contact: 'Kontakt',
+      footer_copy: '© 2026 Bardun Stall AB. Alla rättigheter förbehållna.',
+      news_eyebrow: 'I pressen', news_title: 'Senaste nytt',
+      lang_btn: '🇬🇧'
+    }
+  };
+
+  let currentLang = 'en';
+
+  function set(id, html) { const el = document.getElementById(id); if (el) el.innerHTML = html; }
+  function setText(id, txt) { const el = document.getElementById(id); if (el) el.textContent = txt; }
+
+  function applyLanguage(lang) {
+    const t = TRANSLATIONS[lang];
+    document.documentElement.lang = lang;
+    currentLang = lang;
+
+    // Nav
+    setText('nav-about', t.nav_about); setText('nav-services', t.nav_services);
+    setText('nav-horses', t.nav_horses); setText('nav-training', t.nav_training); setText('nav-news', t.nav_news);
+    setText('nav-contact', t.nav_contact);
+    setText('lang-toggle', t.lang_btn);
+
+    // Hero
+    document.querySelector('.hero-content h1').innerHTML = t.hero_h1;
+    document.querySelector('.hero-sub').textContent = t.hero_sub;
+    document.querySelector('a.btn-primary[href="#horses"]').textContent = t.hero_btn1;
+    document.querySelector('a.btn-secondary[href="#contact"]').textContent = t.hero_btn2;
+    document.querySelector('.hero-scroll').textContent = t.hero_scroll;
+
+    // Stats
+    const statLabels = document.querySelectorAll('.stat-label');
+    if (statLabels[0]) statLabels[0].textContent = t.stat1;
+    if (statLabels[1]) statLabels[1].textContent = t.stat2;
+    if (statLabels[2]) statLabels[2].textContent = t.stat3;
+    if (statLabels[3]) statLabels[3].textContent = t.stat4;
+
+    // Family
+    document.querySelector('.family-title').textContent = t.family_title;
+    document.querySelector('.family-subtitle').textContent = t.family_sub;
+    const cards = document.querySelectorAll('.family-card');
+    if (cards[0]) {
+      cards[0].querySelector('.family-role').innerHTML = t.andreas_role;
+      cards[0].querySelector('.family-bio').textContent = t.andreas_bio;
+    }
+    if (cards[1]) {
+      cards[1].querySelector('.family-role').innerHTML = t.jonathan_role;
+      cards[1].querySelector('.family-bio').textContent = t.jonathan_bio;
+    }
+    document.querySelector('.mission-title').textContent = t.mission_title;
+    document.querySelector('.mission-text').textContent = t.mission_text;
+
+    // Services
+    const svcHeader = document.querySelector('.services-header');
+    if (svcHeader) {
+      svcHeader.querySelector('.section-eyebrow').textContent = t.svc_eyebrow;
+      svcHeader.querySelector('.section-title').textContent = t.svc_title;
+      svcHeader.querySelector('.section-body').textContent = t.svc_body;
+    }
+    const svcCards = document.querySelectorAll('.service-card');
+    const svcData = [
+      [t.svc1_title, t.svc1_text], [t.svc2_title, t.svc2_text], [t.svc3_title, t.svc3_text]
+    ];
+    svcCards.forEach((c, i) => {
+      if (svcData[i]) {
+        c.querySelector('h3').textContent = svcData[i][0];
+        c.querySelector('p').textContent = svcData[i][1];
+        c.querySelector('.service-learn-more').innerHTML = t.learn_more + ' <span>→</span>';
+      }
+    });
+
+    // Horses section header
+    const horsesHeader = document.querySelector('.horses-header');
+    if (horsesHeader) {
+      horsesHeader.querySelector('.section-eyebrow').textContent = t.horses_eyebrow;
+      horsesHeader.querySelector('.section-title').textContent = t.horses_title;
+      horsesHeader.querySelector('.section-body').textContent = t.horses_body;
+      horsesHeader.querySelector('.btn-secondary').textContent = t.horses_view_all;
+    }
+    // Horse cards
+    const horseCards = document.querySelectorAll('.horse-card');
+    const horseDescs = [t.floripa_desc, t.metarie_desc, t.bandida_desc];
+    const horseBadges = [t.badge_active, t.badge_rising, t.badge_unstarted];
+    const horseProfileLinks = [t.full_profile_results, t.full_profile_results, t.full_profile];
+    horseCards.forEach((c, i) => {
+      const badge = c.querySelector('.horse-badge');
+      if (badge) badge.textContent = horseBadges[i];
+      const paras = c.querySelectorAll('.horse-info > p:not(.horse-lineage)');
+      if (paras[0]) paras[0].textContent = horseDescs[i];
+      const statKeys = c.querySelectorAll('.horse-stat-key');
+      if (statKeys[0]) statKeys[0].textContent = t.lbl_born;
+      if (statKeys[1]) statKeys[1].textContent = t.lbl_debut;
+      if (statKeys[2]) statKeys[2].textContent = t.lbl_gender;
+      if (statKeys[3]) statKeys[3].textContent = t.lbl_prize;
+      // Filly / Awaited values
+      const statVals = c.querySelectorAll('.horse-stat-val');
+      statVals.forEach(v => {
+        if (v.textContent === 'Filly' || v.textContent === 'Sto') v.textContent = t.lbl_filly;
+        if (v.textContent === 'Awaited' || v.textContent === 'Inväntas') v.textContent = t.lbl_awaited;
+      });
+      const link = c.querySelector('.service-learn-more');
+      if (link) link.innerHTML = horseProfileLinks[i] + ' <span>→</span>';
+    });
+
+    // Training
+    const trnContent = document.querySelector('.training-content');
+    if (trnContent) {
+      trnContent.querySelector('.section-eyebrow').textContent = t.trn_eyebrow;
+      trnContent.querySelector('.section-title').textContent = t.trn_title;
+      trnContent.querySelector('.section-body').textContent = t.trn_body;
+      document.querySelector('.training-badge-title').textContent = t.trn_photo;
+      const steps = trnContent.querySelectorAll('.training-step');
+      const stepData = [
+        [t.trn1_title, t.trn1_text],[t.trn2_title, t.trn2_text],
+        [t.trn3_title, t.trn3_text],[t.trn4_title, t.trn4_text]
+      ];
+      steps.forEach((s, i) => {
+        if (stepData[i]) {
+          s.querySelector('h4').textContent = stepData[i][0];
+          s.querySelector('p').textContent = stepData[i][1];
+        }
+      });
+    }
+
+    // CTA
+    const cta = document.querySelector('.cta-content');
+    if (cta) {
+      cta.querySelector('.section-eyebrow').textContent = t.cta_eyebrow;
+      cta.querySelector('h2 span').textContent = t.cta_title;
+      document.getElementById('cta-body').textContent = t.cta_body;
+      const btns = cta.querySelectorAll('.hero-buttons a');
+      if (btns[0]) btns[0].textContent = t.cta_btn1;
+      if (btns[1]) btns[1].textContent = t.cta_btn2;
+    }
+
+    // Contact
+    const contactInfo = document.querySelector('.contact-info');
+    if (contactInfo) {
+      contactInfo.querySelector('.section-eyebrow').textContent = t.contact_eyebrow;
+      contactInfo.querySelector('.section-title').innerHTML = t.contact_title;
+      contactInfo.querySelector('.section-body').textContent = t.contact_body;
+      const details = contactInfo.querySelectorAll('.contact-detail h4');
+      if (details[0]) details[0].textContent = t.lbl_location;
+      if (details[1]) details[1].textContent = t.lbl_email;
+    }
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.querySelector('h3').textContent = t.form_title;
+      const labels = form.querySelectorAll('label');
+      const labelKeys = [t.lbl_firstname, t.lbl_lastname, t.lbl_emailaddr, t.lbl_interest, t.lbl_message];
+      labels.forEach((l, i) => { if (labelKeys[i]) l.textContent = labelKeys[i]; });
+      const inputs = form.querySelectorAll('input[type="text"], input[type="email"]');
+      if (inputs[0]) inputs[0].placeholder = t.ph_firstname;
+      if (inputs[1]) inputs[1].placeholder = t.ph_lastname;
+      if (inputs[2]) inputs[2].placeholder = t.ph_email;
+      const ta = form.querySelector('textarea');
+      if (ta) ta.placeholder = t.ph_message;
+      const sel = form.querySelector('select');
+      if (sel) sel.innerHTML = `
+        <option value="">${t.sel_placeholder}</option>
+        <option>${t.sel_opt1}</option>
+        <option>${t.sel_opt2}</option>
+        <option>${t.sel_opt3}</option>
+        <option>${t.sel_opt5}</option>`;
+      form.querySelector('.form-submit').textContent = t.form_submit;
+    }
+
+    // Footer
+    setText('footer-desc', t.footer_desc);
+    setText('footer-services-h', t.footer_services);
+    setText('footer-stable-h', t.footer_stable);
+    setText('footer-connect-h', t.footer_connect);
+    setText('footer-owning', t.footer_owning);
+    setText('footer-racing', t.footer_racing);
+    setText('footer-training', t.footer_training);
+    setText('footer-breeding', t.footer_breeding);
+    setText('footer-story', t.footer_story);
+    setText('footer-horses', t.footer_horses);
+    setText('footer-training2', t.footer_training);
+    setText('footer-contact', t.footer_contact);
+    setText('footer-copy', t.footer_copy);
+    setText('news-eyebrow', t.news_eyebrow);
+    setText('news-title', t.news_title);
+
+    localStorage.setItem('bardun_lang', lang);
+  }
+
+  function toggleLang() {
+    applyLanguage(currentLang === 'en' ? 'sv' : 'en');
+  }
+
+  // URL is /en/ — always show English. Language switch is URL-based now.
+  applyLanguage('en');
+  </script>
+
+  <!-- NEWS DATA (updated by scheduled task) -->
+  <script src="/news.js"></script>
+
+  <script>
+  // Render news cards from window.BARDUN_NEWS
+  (function renderNews() {
+    var data = window.BARDUN_NEWS;
+    var grid = document.getElementById('news-grid');
+    var empty = document.getElementById('news-empty');
+    if (!data || !data.articles || data.articles.length === 0) return;
+
+    empty.style.display = 'none';
+    var articles = data.articles.slice(0, 5);
+    articles.forEach(function(a) {
+      var card = document.createElement('a');
+      card.href = a.url || '#';
+      card.target = '_blank';
+      card.rel = 'noopener';
+      card.className = 'news-card';
+
+      var meta = '<div class="news-card-meta">' +
+        '<span>' + (a.source || '') + '</span>' +
+        '<span>' + (a.date || '') + '</span>' +
+        '</div>';
+      var title = '<div class="news-card-title">' + (a.title || '') + '</div>';
+      var excerpt = a.excerpt ? '<div class="news-card-excerpt">' + a.excerpt + '</div>' : '';
+      var link = '<span class="news-card-link">Read article →</span>';
+
+      card.innerHTML = meta + title + excerpt + link;
+      grid.appendChild(card);
+    });
+  })();
+  </script>
+  <script>
+(function(){var p=location.pathname;var alt;if(p.indexOf('/sv/')===0){alt=p.replace('/sv/','/en/').replace('/harstamning/','/pedigree/').replace('/resultat/','/results/').replace('/videor/','/videos/')}else if(p.indexOf('/en/')===0){alt=p.replace('/en/','/sv/').replace('/pedigree/','/harstamning/').replace('/results/','/resultat/').replace('/videos/','/videor/')}else{alt='/'}var el=document.getElementById('lang-alt');if(el){el.href=alt;el.addEventListener('click',function(){try{localStorage.setItem('lang',this.textContent.trim().toLowerCase())}catch(e){}})}})();
+</script>
+</body>
+</html>
