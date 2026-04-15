@@ -412,7 +412,7 @@
     <div class="update-notice">
       <div class="dot"></div>
       <span>Results are updated automatically every <strong style="color:var(--gold)">Monday</strong> from
-        <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/results" target="_blank" style="color:var(--gold)">Travsport (ts793642)</a>.
+        <a href="https://sportapp.travsport.se/sportinfo/horse/ts793642/results" target="_blank" style="color:var(--gold)">Travsport (ts793642)</a>. Press <strong style="color:var(--gold)">Refresh now</strong> for the latest data.
       </span>
       <button class="btn-refresh" id="btn-refresh" onclick="fetchResults()">
         <svg id="refresh-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -543,7 +543,7 @@
       var btn  = document.getElementById('btn-refresh');
       var icon = document.getElementById('refresh-icon');
       btn.classList.add('spinning'); btn.disabled = true;
-      fetch('/metarie-results.json')
+      fetch('/metarie-results.json?t=' + Date.now())
         .then(function(r) { return r.json(); })
         .then(function(data) {
           resultsData = data;

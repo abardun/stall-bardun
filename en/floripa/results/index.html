@@ -456,7 +456,7 @@
 
     <div class="update-notice">
       <div class="dot"></div>
-      <span>Results are automatically updated every <strong style="color:var(--gold)">Monday</strong> from <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/results" target="_blank" style="color:var(--gold)">Travsport (ts797786)</a>. Data syncs live — no manual updating required.</span>
+      <span>Results are automatically updated every <strong style="color:var(--gold)">Monday</strong> from <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/results" target="_blank" style="color:var(--gold)">Travsport (ts797786)</a>. Press <strong style="color:var(--gold)">Refresh now</strong> for the latest data.</span>
       <button class="btn-refresh" id="btn-refresh" onclick="fetchResults()">
         <svg id="refresh-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -556,7 +556,7 @@
       btn.classList.add('spinning');
       btn.disabled = true;
 
-      fetch('/floripa-results.json')
+      fetch('/floripa-results.json?t=' + Date.now())
         .then(r => r.json())
         .then(data => {
           resultsData = data;
