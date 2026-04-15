@@ -51,104 +51,130 @@
       overflow-x: hidden;
     }
 
-    /* -- NAV -- */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 60px; height: 76px;
-      background: rgba(13,13,13,0.95);
-      backdrop-filter: blur(12px);
+      padding: 0 60px; height: 72px;
+      background: rgba(13,13,13,0.9); backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; height: 100%; align-self: stretch; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; height: 100%; }
     .nav-logo-img {
-      height: 80px; width: 80px; object-fit: cover; border-radius: 0;
-      display: block; flex-shrink: 0;
+      height: 60px; width: 60px;
       filter: brightness(0) saturate(100%) invert(72%) sepia(38%) saturate(620%) hue-rotate(2deg) brightness(100%);
     }
-    .nav-back {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--white-70); text-decoration: none; transition: color 0.2s;
-    }
+    .nav-back { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white-70); text-decoration: none; transition: color 0.2s; }
     .nav-back:hover { color: var(--gold); }
-    .nav-back::before { content: '\2190'; font-size: 14px; }
 
-    /* -- HERO -- */
-    .horse-hero {
-      padding-top: 76px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      min-height: 560px;
+    /* HERO — Compact asymmetric for subpages */
+    .hero {
+      position: relative;
+      padding-top: 72px;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      min-height: 400px;
+      max-width: 1400px;
+      margin: 0 auto;
+      overflow: hidden;
     }
-    .horse-hero-image {
-      background: url('/floripa.png') center/cover no-repeat;
-      min-height: 480px;
+    .hero-image {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
     }
-    .horse-hero-content {
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: 40%;
+      background: linear-gradient(to right, transparent, var(--dark-2));
+      z-index: 2;
+    }
+    .hero-image::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, transparent, rgba(20,20,20,0.4));
+      z-index: 2;
+    }
+    .hero-name-overlay {
+      position: absolute;
+      bottom: 24px; left: 0; right: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .hero-name-overlay h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(56px, 7vw, 96px);
+      font-weight: 900; line-height: 0.85;
+      color: var(--white);
+      text-shadow: 0 4px 48px rgba(0,0,0,0.5);
+      padding-left: 48px;
+      width: 130%;
+    }
+    .hero-content {
       background: var(--dark-2);
-      padding: 64px 72px;
+      padding: 36px 40px 36px 30px;
       display: flex; flex-direction: column; justify-content: center;
-      border-left: 1px solid var(--border);
+      position: relative;
+      z-index: 2;
     }
-    .horse-eyebrow {
+    .hero-eyebrow {
       font-size: 11px; font-weight: 500; letter-spacing: 0.3em;
       text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 12px;
     }
-    .horse-name {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(48px, 6vw, 72px); font-weight: 900;
-      line-height: 1; color: var(--white); margin-bottom: 6px;
+    .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    .hero-lineage {
+      font-size: 14px; font-weight: 500; color: var(--red);
+      margin-bottom: 20px;
     }
-    .horse-lineage-hero {
-      font-size: 14px; font-weight: 600; color: var(--red);
-      margin-bottom: 28px; letter-spacing: 0.03em;
+    .hero-lineage span { color: var(--white-40); }
+    .key-stats {
+      display: flex; gap: 24px; margin-bottom: 20px;
+      padding-bottom: 20px; border-bottom: 1px solid var(--border);
     }
-    .horse-meta-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: var(--border);
-      border: 1px solid var(--border); border-radius: 4px;
-      overflow: hidden; margin-bottom: 32px;
+    .key-stat-label {
+      font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--white-40); margin-bottom: 2px;
     }
-    .horse-meta-item {
-      background: var(--dark-3); padding: 16px 20px;
+    .key-stat-value { font-size: 16px; font-weight: 700; }
+    .key-stat-value.gold { color: var(--gold); }
+    .hero-details {
+      display: flex; gap: 18px; flex-wrap: wrap;
+      margin-bottom: 16px;
+      font-size: 11px; color: var(--white-40);
     }
-    .horse-meta-label {
-      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--white-40); margin-bottom: 4px;
-    }
-    .horse-meta-value {
-      font-size: 16px; font-weight: 700; color: var(--white);
-    }
-    .horse-meta-value.accent { color: var(--gold); }
-    .horse-desc {
-      font-size: 15px; font-weight: 300; color: var(--white-70);
-      line-height: 1.8; margin-bottom: 28px;
-    }
-    .travsport-link {
+    .hero-details span { color: var(--white-70); font-weight: 500; }
+    .hero-details .accent { color: var(--gold); }
+    .btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--gold); text-decoration: none;
-      border: 1px solid var(--border); border-radius: 2px; padding: 10px 18px;
-      transition: background 0.2s, border-color 0.2s;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid var(--border); padding: 10px 16px; border-radius: 3px;
+      transition: border-color 0.2s, background 0.2s;
+      align-self: flex-start;
     }
-    .travsport-link:hover { background: var(--white-10); border-color: var(--gold); }
-    .travsport-link svg { width: 14px; height: 14px; }
+    .btn-outline:hover { background: var(--white-10); border-color: var(--gold); }
 
-    /* -- TABS (sub-nav) -- */
     .tabs-bar {
-      background: var(--dark-3);
-      border-bottom: 1px solid var(--border);
-      display: flex; gap: 0; padding: 0 60px;
-      position: sticky; top: 76px; z-index: 50;
+      display: flex; justify-content: center;
+      background: var(--dark-3); border-bottom: 1px solid var(--border);
+      position: sticky; top: 72px; z-index: 50;
     }
     .tab-btn {
-      background: none; border: none; color: var(--white-40);
-      font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 18px 24px; cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-      text-decoration: none;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--white-40); text-decoration: none; padding: 16px 28px;
+      border-bottom: 2px solid transparent; transition: all 0.2s;
     }
     .tab-btn:hover { color: var(--white); }
     .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
@@ -251,22 +277,21 @@
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
     /* -- RESPONSIVE -- */
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-image { min-height: 280px; }
+      .hero-image::after { width: 100%; background: linear-gradient(to bottom, transparent 60%, var(--dark-2)); }
+      .hero-name-overlay { bottom: 16px; }
+      .hero-name-overlay h1 { font-size: 48px; width: 100%; padding-left: 24px; }
+      .hero-content { padding: 32px 24px; }
+      .key-stats { flex-wrap: wrap; gap: 16px; }
       nav { padding: 0 24px; }
-      .horse-hero { grid-template-columns: 1fr; }
-      .horse-hero-image { min-height: 300px; }
-      .horse-hero-content { padding: 48px 28px; }
-      .tabs-bar { padding: 0 24px; overflow-x: auto; }
+      .tabs-bar { overflow-x: auto; justify-content: flex-start; padding: 0 24px; }
+    }
+    @media (max-width: 900px) {
       .results-section { padding: 52px 24px; }
       .results-summary { grid-template-columns: repeat(3, 1fr); }
       .results-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-    }
-
-    @media (min-width: 1400px) {
-      .horse-hero {
-        max-width: 1400px;
-        margin: 0 auto;
-      }
     }
 
     footer {
@@ -277,25 +302,25 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 48px; margin-bottom: 48px;
     }
-    .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin-top: 16px; }
+    .footer-brand p { color: var(--white-40); font-size: 14px; line-height: 1.7; margin-top: 16px; }
     .footer-col h4 {
       font-family: 'Playfair Display', serif; color: var(--white);
       font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
     }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
     .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-col ul a { color: var(--white-40); text-decoration: none; font-size: 13px; transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--gold); }
     .footer-bottom {
       border-top: 1px solid var(--border); padding-top: 24px;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .footer-bottom p { color: var(--text-muted); font-size: 12px; }
+    .footer-bottom p { color: var(--white-40); font-size: 12px; }
     .social-links { display: flex; gap: 12px; }
     .social-link {
       width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); text-decoration: none; font-size: 14px; transition: all 0.2s;
+      color: var(--white-40); text-decoration: none; font-size: 14px; transition: all 0.2s;
     }
     .social-link:hover { border-color: var(--gold); color: var(--gold); }
     @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
@@ -309,50 +334,39 @@
     <a href="/" class="nav-logo">
       <img src="/logo.png" alt="Bardun Stall AB" class="nav-logo-img" />
     </a>
-    <a href="/#horses" class="nav-back">Tillbaka till hästar</a>
+    <a href="/#horses" class="nav-back">&larr; Tillbaka till hästar</a>
   </nav>
 
   <!-- HERO -->
-  <div class="horse-hero">
-    <div class="horse-hero-image"></div>
-    <div class="horse-hero-content">
-      <p class="horse-eyebrow">Hästprofil &middot; Bardun Stall AB</p>
-      <h1 class="horse-name">Floripa</h1>
-      <p class="horse-lineage-hero">Far: Father Patrick &nbsp;|&nbsp; Mor: Gazelle Am</p>
-      <div class="horse-meta-grid">
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Född</div>
-          <div class="horse-meta-value">2023</div>
+  <div class="hero">
+    <div class="hero-image">
+      <img src="/floripa.png" alt="Floripa — varmblodig travare" />
+      <div class="hero-name-overlay">
+        <h1>Floripa</h1>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hästprofil</p>
+      <p class="hero-lineage">Far: Father Patrick <span>|</span> Mor: Gazelle Am</p>
+      <div class="key-stats">
+        <div>
+          <div class="key-stat-label">Född</div>
+          <div class="key-stat-value">2023</div>
         </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Debut</div>
-          <div class="horse-meta-value">2025</div>
+        <div>
+          <div class="key-stat-label">Kön</div>
+          <div class="key-stat-value">Sto</div>
         </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Kön</div>
-          <div class="horse-meta-value">Sto</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Ras</div>
-          <div class="horse-meta-value">Varmblodig travare</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">Disciplin</div>
-          <div class="horse-meta-value">Trav</div>
-        </div>
-        <div class="horse-meta-item">
-          <div class="horse-meta-label">UELN</div>
-          <div class="horse-meta-value accent">75200211S231295</div>
+        <div>
+          <div class="key-stat-label">Prispengar</div>
+          <div class="key-stat-value gold">114 400 kr</div>
         </div>
       </div>
-      <p class="horse-desc">Floripa är smeknamnet som varje brasilianare använder för Florianópolis — den vackraste och mest älskade staden i Brasilien. En ö med turkost vatten, gröna berg och orörda stränder som har en särskild plats i varje brasilianares hjärta som ingen annan stad.</p>
-      <p class="horse-desc" style="margin-top:16px; color:var(--gold); font-style:italic">Hästen Floripa bär samma skönhet med sig ut på banan.</p>
-      <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/pedigree" target="_blank" class="travsport-link">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-        Visa på Travsport
-      </a>
+      <div class="hero-details">
+        <div>Ras: <span>Varmblodig travare</span></div>
+        <div>UELN: <span class="accent">75200211S231295</span></div>
+      </div>
+      <a href="https://sportapp.travsport.se/sportinfo/horse/ts797786/pedigree" target="_blank" class="btn-outline">Visa på Travsport ↗</a>
     </div>
   </div>
 
