@@ -539,6 +539,132 @@
       .mission-block { padding: 40px 28px; }
     }
 
+
+    /* ── DASHBOARD ── */
+    .dashboard { background: var(--dark-3); text-align: center; }
+    .dashboard-header { margin-bottom: 48px; }
+    .dashboard-header .section-divider { margin: 20px auto 0; }
+    .dashboard-header .section-body { margin: 16px auto 0; }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 48px;
+    }
+    .kpi-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 16px;
+    }
+    .kpi-value {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .kpi-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white-40);
+    }
+
+    .year-bars {
+      max-width: 700px;
+      margin: 0 auto 48px;
+      text-align: left;
+    }
+    .year-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .year-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white-70);
+      width: 48px;
+      flex-shrink: 0;
+    }
+    .year-bar-track {
+      flex: 1;
+      height: 28px;
+      background: var(--dark-2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .year-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), #e8c564);
+      border-radius: 4px;
+      transition: width 1s ease;
+    }
+    .year-stats {
+      font-size: 12px;
+      color: var(--white-40);
+      white-space: nowrap;
+      min-width: 200px;
+    }
+    .year-stats strong { color: var(--white-70); }
+
+    .upcoming-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--dark-2), rgba(201,169,97,0.08));
+      border: 1px solid rgba(201,169,97,0.25);
+      border-radius: 10px;
+      padding: 28px 36px;
+      display: none;
+      text-align: left;
+    }
+    .upcoming-card.visible { display: flex; align-items: center; gap: 20px; }
+    .upcoming-icon { font-size: 36px; flex-shrink: 0; }
+    .upcoming-info { flex: 1; }
+    .upcoming-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .upcoming-detail {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.5;
+    }
+    .upcoming-detail .sub { font-size: 13px; color: var(--white-40); font-weight: 400; }
+    .upcoming-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,169,97,0.3);
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .upcoming-link:hover { background: rgba(201,169,97,0.1); border-color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .year-row { gap: 10px; }
+      .year-stats { min-width: auto; font-size: 11px; }
+      .upcoming-card.visible { flex-direction: column; text-align: center; }
+      .upcoming-link { align-self: center; }
+    }
+
     /* ── HORSES ── */
     .horses {
       background: var(--dark-3);
@@ -1365,6 +1491,47 @@
     </div>
   </section>
 
+
+  <!-- DASHBOARD DASHBOARD-INJECTED -->
+  <section class="dashboard" id="dashboard">
+    <div class="dashboard-header" data-reveal>
+      <p class="section-eyebrow" id="dash-eyebrow">Stable Performance</p>
+      <h2 class="section-title" id="dash-title">Season Overview</h2>
+      <div class="section-divider"></div>
+      <p class="section-body" id="dash-body" style="max-width:550px">Real-time statistics from Travsport, updated every Monday.</p>
+    </div>
+
+    <div class="kpi-grid" data-reveal>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-starts">&mdash;</div>
+        <div class="kpi-label" id="kpi-starts-label">Starts</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-wins">&mdash;</div>
+        <div class="kpi-label" id="kpi-wins-label">Wins</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-winpct">&mdash;</div>
+        <div class="kpi-label" id="kpi-winpct-label">Win %</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-earnings">&mdash;</div>
+        <div class="kpi-label" id="kpi-earnings-label">Earnings</div>
+      </div>
+    </div>
+
+    <div class="year-bars" id="year-bars" data-reveal></div>
+
+    <div class="upcoming-card" id="upcoming-card" data-reveal>
+      <div class="upcoming-icon">&#127943;</div>
+      <div class="upcoming-info">
+        <div class="upcoming-label" id="upcoming-label">Upcoming Race</div>
+        <div class="upcoming-detail" id="upcoming-detail"></div>
+      </div>
+      <a href="#" class="upcoming-link" id="upcoming-link">See horse &rarr;</a>
+    </div>
+  </section>
+
   <!-- HORSES -->
   <section class="horses" id="horses">
     <div class="horses-header" data-reveal>
@@ -1780,6 +1947,12 @@
       footer_story: 'Our Story', footer_horses: 'Our Horses', footer_contact: 'Contact',
       footer_copy: '© 2026 Bardun Stall AB. All rights reserved.',
       news_eyebrow: 'In the Press', news_title: 'Latest News',
+      // Dashboard
+      dash_eyebrow: 'Stable Performance', dash_title: 'Season Overview',
+      dash_body: 'Real-time statistics from Travsport, updated every Monday.',
+      dash_starts: 'Starts', dash_wins: 'Wins', dash_winpct: 'Win %', dash_earnings: 'Earnings',
+      dash_upcoming: 'Upcoming Race', dash_see_horse: 'See horse \u2192',
+      dash_yr_starts: 'starts', dash_yr_wins: 'wins',
       lang_btn: '🇸🇪'
     },
     sv: {
@@ -1850,6 +2023,12 @@
       footer_story: 'Vår historia', footer_horses: 'Våra hästar', footer_contact: 'Kontakt',
       footer_copy: '© 2026 Bardun Stall AB. Alla rättigheter förbehållna.',
       news_eyebrow: 'I pressen', news_title: 'Senaste nytt',
+      // Dashboard
+      dash_eyebrow: 'Stallets prestation', dash_title: 'S\u00e4songs\u00f6versikt',
+      dash_body: 'Aktuell statistik fr\u00e5n Travsport, uppdateras varje m\u00e5ndag.',
+      dash_starts: 'Starter', dash_wins: 'Segrar', dash_winpct: 'Vinst %', dash_earnings: 'Prispengar',
+      dash_upcoming: 'Kommande lopp', dash_see_horse: 'Se h\u00e4st \u2192',
+      dash_yr_starts: 'starter', dash_yr_wins: 'segrar',
       lang_btn: '🇬🇧'
     }
   };
@@ -1917,6 +2096,20 @@
         c.querySelector('.service-learn-more').innerHTML = t.learn_more + ' <span>→</span>';
       }
     });
+
+
+    // Dashboard
+    setText('dash-eyebrow', t.dash_eyebrow);
+    setText('dash-title', t.dash_title);
+    setText('dash-body', t.dash_body);
+    setText('kpi-starts-label', t.dash_starts);
+    setText('kpi-wins-label', t.dash_wins);
+    setText('kpi-winpct-label', t.dash_winpct);
+    setText('kpi-earnings-label', t.dash_earnings);
+    setText('upcoming-label', t.dash_upcoming);
+    setText('upcoming-link', t.dash_see_horse);
+    // Re-render year bars with translated labels
+    if (window._dashboardData) { renderYearBars(window._dashboardData, t); }
 
     // Horses section header
     const horsesHeader = document.querySelector('.horses-header');
@@ -2078,5 +2271,56 @@
   <script>
 (function(){var p=location.pathname;var alt;if(p.indexOf('/sv/')===0){alt=p.replace('/sv/','/en/').replace('/harstamning/','/pedigree/').replace('/resultat/','/results/').replace('/videor/','/videos/')}else if(p.indexOf('/en/')===0){alt=p.replace('/en/','/sv/').replace('/pedigree/','/harstamning/').replace('/results/','/resultat/').replace('/videos/','/videor/')}else{alt='/'}var el=document.getElementById('lang-alt');if(el){el.href=alt;el.addEventListener('click',function(){try{localStorage.setItem('lang',this.textContent.trim().toLowerCase())}catch(e){}})}})();
 </script>
+
+  <!-- DASHBOARD DATA -->
+  <script>
+  function renderYearBars(d, t) {
+    var bars = document.getElementById('year-bars');
+    if (!bars) return;
+    var maxStarts = Math.max.apply(null, d.yearly.map(function(y){ return y.starts; }));
+    bars.innerHTML = d.yearly.filter(function(y){ return y.starts > 0; }).map(function(y) {
+      var pct = maxStarts > 0 ? Math.round(y.starts / maxStarts * 100) : 0;
+      return '<div class="year-row">' +
+        '<span class="year-label">' + y.year + '</span>' +
+        '<div class="year-bar-track"><div class="year-bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="year-stats"><strong>' + y.starts + '</strong> ' + (t ? t.dash_yr_starts : 'starts') + ' \u00b7 <strong>' + y.wins + '</strong> ' + (t ? t.dash_yr_wins : 'wins') + ' \u00b7 <strong>' + y.earnings.toLocaleString() + '</strong> kr</span>' +
+      '</div>';
+    }).join('');
+  }
+
+  (function loadDashboard() {
+    fetch('/stable-stats.json?t=' + Date.now())
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        window._dashboardData = d;
+        var t = d.totals;
+        document.getElementById('kpi-starts').textContent = t.starts;
+        document.getElementById('kpi-wins').textContent = t.wins;
+        document.getElementById('kpi-winpct').textContent = t.starts > 0 ? Math.round(t.wins / t.starts * 100) + '%' : '\u2014';
+        document.getElementById('kpi-earnings').textContent = t.earnings.toLocaleString() + ' kr';
+
+        renderYearBars(d, null);
+
+        if (d.upcoming && d.upcoming.length > 0) {
+          var race = d.upcoming[0];
+          var raceDate = new Date(race.date + 'T00:00:00');
+          var today = new Date();
+          today.setHours(0,0,0,0);
+          if (raceDate >= today) {
+            var card = document.getElementById('upcoming-card');
+            card.classList.add('visible');
+            var lang = document.documentElement.lang;
+            var dateStr = raceDate.toLocaleDateString(lang === 'sv' ? 'sv-SE' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+            var detail = '<strong>' + race.horse + '</strong> \u2192 ' + race.track + ' \u00b7 ' + dateStr + ' \u00b7 ' + (lang === 'sv' ? 'Lopp' : 'Race') + ' ' + race.race;
+            detail += '<br><span class="sub">' + (lang === 'sv' ? 'Kusk' : 'Driver') + ': ' + race.driver + '</span>';
+            document.getElementById('upcoming-detail').innerHTML = detail;
+            var link = document.getElementById('upcoming-link');
+            link.href = (lang === 'sv' ? '/sv' : '/en') + '/' + race.horse.toLowerCase() + '/';
+          }
+        }
+      }).catch(function(e) { console.warn('Dashboard data unavailable:', e); });
+  })();
+  </script>
+
 </body>
 </html>
