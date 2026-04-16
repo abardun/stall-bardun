@@ -2283,7 +2283,7 @@
       return '<div class="year-row">' +
         '<span class="year-label">' + y.year + '</span>' +
         '<div class="year-bar-track"><div class="year-bar-fill" style="width:' + pct + '%"></div></div>' +
-        '<span class="year-stats"><strong>' + y.starts + '</strong> ' + (t ? t.dash_yr_starts : 'starts') + ' \u00b7 <strong>' + y.wins + '</strong> ' + (t ? t.dash_yr_wins : 'wins') + ' \u00b7 <strong>' + y.earnings.toLocaleString() + '</strong> kr</span>' +
+        '<span class="year-stats"><strong>' + y.starts + '</strong> ' + (t ? t.dash_yr_starts : (document.documentElement.lang==='sv'?'starter':'starts')) + ' \u00b7 <strong>' + y.wins + '</strong> ' + (t ? t.dash_yr_wins : (document.documentElement.lang==='sv'?'segrar':'wins')) + ' \u00b7 <strong>' + y.earnings.toLocaleString() + '</strong> kr</span>' +
       '</div>';
     }).join('');
   }
