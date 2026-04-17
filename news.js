@@ -1,7 +1,7 @@
 // Bardun Stall AB — News Feed
 // Auto-updated daily by news-update.js. Do not edit manually.
 window.BARDUN_NEWS = {
-  updated: "2026-04-16",
+  updated: "2026-04-17",
   articles: [
     {
         "title": "Floripa tog första segern i karriären – har sprungit in mer än 100 000",
