@@ -4,224 +4,224 @@
 
   <!-- Language picker root -->
   <url>
-    <loc>https://www.stallbardun.com/</loc>
+    <loc>https://stallbardun.com/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.stallbardun.com/sv/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stallbardun.com/sv/" />
   </url>
 
   <!-- Swedish home + horses -->
   <url>
-    <loc>https://www.stallbardun.com/sv/</loc>
+    <loc>https://stallbardun.com/sv/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/floripa/</loc>
+    <loc>https://stallbardun.com/sv/floripa/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/floripa/harstamning/</loc>
+    <loc>https://stallbardun.com/sv/floripa/harstamning/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/floripa/resultat/</loc>
+    <loc>https://stallbardun.com/sv/floripa/resultat/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/floripa/videor/</loc>
+    <loc>https://stallbardun.com/sv/floripa/videor/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/videos/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/metarie/</loc>
+    <loc>https://stallbardun.com/sv/metarie/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/metarie/harstamning/</loc>
+    <loc>https://stallbardun.com/sv/metarie/harstamning/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/metarie/resultat/</loc>
+    <loc>https://stallbardun.com/sv/metarie/resultat/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/metarie/videor/</loc>
+    <loc>https://stallbardun.com/sv/metarie/videor/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/videos/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/bandida/</loc>
+    <loc>https://stallbardun.com/sv/bandida/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/bandida/harstamning/</loc>
+    <loc>https://stallbardun.com/sv/bandida/harstamning/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/bandida/resultat/</loc>
+    <loc>https://stallbardun.com/sv/bandida/resultat/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/sv/bandida/videor/</loc>
+    <loc>https://stallbardun.com/sv/bandida/videor/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/videos/" />
   </url>
 
   <!-- English tree -->
   <url>
-    <loc>https://www.stallbardun.com/en/</loc>
+    <loc>https://stallbardun.com/en/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/floripa/</loc>
+    <loc>https://stallbardun.com/en/floripa/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/floripa/pedigree/</loc>
+    <loc>https://stallbardun.com/en/floripa/pedigree/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/floripa/results/</loc>
+    <loc>https://stallbardun.com/en/floripa/results/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/floripa/videos/</loc>
+    <loc>https://stallbardun.com/en/floripa/videos/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/floripa/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/floripa/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/floripa/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/floripa/videos/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/metarie/</loc>
+    <loc>https://stallbardun.com/en/metarie/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/metarie/pedigree/</loc>
+    <loc>https://stallbardun.com/en/metarie/pedigree/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/metarie/results/</loc>
+    <loc>https://stallbardun.com/en/metarie/results/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/metarie/videos/</loc>
+    <loc>https://stallbardun.com/en/metarie/videos/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/metarie/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/metarie/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/metarie/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/metarie/videos/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/bandida/</loc>
+    <loc>https://stallbardun.com/en/bandida/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/bandida/pedigree/</loc>
+    <loc>https://stallbardun.com/en/bandida/pedigree/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/harstamning/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/pedigree/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/harstamning/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/pedigree/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/bandida/results/</loc>
+    <loc>https://stallbardun.com/en/bandida/results/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/resultat/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/results/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/resultat/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/results/" />
   </url>
   <url>
-    <loc>https://www.stallbardun.com/en/bandida/videos/</loc>
+    <loc>https://stallbardun.com/en/bandida/videos/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.stallbardun.com/sv/bandida/videor/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.stallbardun.com/en/bandida/videos/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://stallbardun.com/sv/bandida/videor/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://stallbardun.com/en/bandida/videos/" />
   </url>
 </urlset>

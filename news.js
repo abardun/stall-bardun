@@ -1,12 +1,19 @@
 // Bardun Stall AB — News Feed
-// Auto-updated daily by news-update.js. Do not edit manually.
+// Auto-updated daily by scheduled task. Do not edit manually.
 window.BARDUN_NEWS = {
   updated: "2026-04-18",
   articles: [
     {
+        "title": "Ungt och gammalt på Mantorp",
+        "url": "https://www.mantorphastsportarena.se/nyheter/ungt-och-gammalt-pa-mantorp",
+        "source": "mantorphastsportarena.se",
+        "date": "2026-04-15",
+        "excerpt": "Inför torsdagens tävlingar på Mantorp lyfts Jonathan Bardun fram med Metarie, som jagar sin tredje seger tillsammans med sin tränare och kusk på hemmabanan."
+    },
+    {
         "title": "Floripa tog första segern i karriären – har sprungit in mer än 100 000",
         "url": "https://www.travronden.se/referat/floripa-tog-forsta-segern-i-karriaren-har-sprungit-in-mer-an-100-000",
-        "source": "Travronden",
+        "source": "travronden.se",
         "date": "2026-03-10",
         "excerpt": "Floripa (e. Father Patrick) tog karriärens första seger tillsammans med sin tränare Jonathan Bardun."
     },
@@ -30,13 +37,6 @@ window.BARDUN_NEWS = {
         "source": "mantorphastsportarena.se",
         "date": "2025-11-24",
         "excerpt": "Den 26-årige tränaren Jonathan Bardun vann tre lopp på en dag på Mantorp Hästsportarena med hästarna Coraline, Metarie och Blyger S.R.P. Metarie, inköpt för 210 000 kr på Travera-auktionen, vann sitt debutlopp på hemmabanan efter bara tre veckors lätt träning hos stallet."
-    },
-    {
-        "title": "Vilken dag och vilken snygging",
-        "url": "https://sulkysport.se/vilken-dag-och-vilken-snygging/",
-        "source": "sulkysport.se",
-        "date": "2025-11-24",
-        "excerpt": "Sulkysport lyfter fram Jonathan Barduns framgångsrika dag på Mantorp med tre segrar som kusk och tränare. Hästen Blyger S.R.P., med fyra segrar på sex starter, framhålls som stallets starka kort."
     }
 ]
 };
