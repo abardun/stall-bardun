@@ -1,7 +1,7 @@
 // Bardun Stall AB — News Feed
 // Auto-updated daily by news-update.js. Do not edit manually.
 window.BARDUN_NEWS = {
-  updated: "2026-09-09",
+  updated: "2026-09-10",
   articles: [
     {
         "title": "Ungt och gammalt på Mantorp",
